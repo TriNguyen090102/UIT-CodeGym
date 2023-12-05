@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UIT_CodeGym.MVVM.Views.PracticeBeginnerPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+    Title="PracticeBeginnerPage"
+    x:DataType="vm:PracticeBeginnerPageVM"
+    Shell.NavBarIsVisible="false">
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Offset="0.0" Color="#7E7CD1" />
+                    <GradientStop Offset="1.0" Color="#F2CDEF" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Margin="20"
+                FontFamily="RalewayExtraBold"
+                FontSize="50"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym"
+                TextColor="#05299E" />
+
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Test">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="About">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <ImageButton
+                    Background="Transparent"
+                    HeightRequest="50"
+                    Source="user.png"
+                    WidthRequest="30" />
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Log out">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="1" HorizontalOptions="StartAndExpand">
+                <Image
+                    Margin="20"
+                    Source="puzzle.png"
+                    WidthRequest="450" />
+                <VerticalStackLayout HorizontalOptions="End">
+                    <Label
+                        Margin="100,50"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        HorizontalOptions="Start"
+                        Text="Allow yourself to be a beginner.&#x0a;No one starts off being excellent"
+                        TextColor="Black" />
+                    <Image
+                        HeightRequest="250"
+                        Source="regulation.png"
+                        WidthRequest="250" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <AbsoluteLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="20"
+                HorizontalOptions="End">
+                <BoxView
+                    x:Name="String"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#DCDFF1" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="String"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="20">
+                <BoxView
+                    x:Name="DataType"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#E1EEBC" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="Data Types"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="20"
+                HorizontalOptions="End">
+                <BoxView
+                    x:Name="Operators"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#E1EEBC" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="Operators"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="20">
+                <BoxView
+                    x:Name="Math"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#DCDFF1" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="Operators"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="20"
+                HorizontalOptions="End">
+                <BoxView
+                    x:Name="Variables"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#DCDFF1" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="Operators"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="20">
+                <BoxView
+                    x:Name="Condition"
+                    HeightRequest="200"
+                    WidthRequest="300"
+                    Color="#E1EEBC" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="40"
+                        Text="Operators"
+                        TextColor="Black" />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Margin="20,-10"
+                        Spacing="10">
+                        <Image
+                            HorizontalOptions="Center"
+                            Source="question.png"
+                            WidthRequest="20" />
+                        <Label
+                            FontFamily="RalewayRegular"
+                            Text="20 Questions"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+
+                    <Button
+                        Grid.Row="2"
+                        Margin="100,30"
+                        CornerRadius="15"
+                        FontFamily="RalewaySemiBold"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="Start"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Offset="0.0" Color="#7E7CD1" />
+                                <GradientStop Offset="1.0" Color="#F2CDEF" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </AbsoluteLayout>
+
+            <Label
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="0,200,0,10"
+                FontFamily="RalewayExtraBold"
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
+                TextColor="Black"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="9"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,40"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Email: phongdaotaodh@uit.edu.vn"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UIT_CodeGym.MVVM.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:UIT_CodeGym.MVVM.ViewModels"
+    Title="LoginPage"
+    x:DataType="vm:LoginPageVM"
+    Shell.NavBarIsVisible="false">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Offset="0" Color="#B8C1FF" />
+                <GradientStop Offset="1" Color="#FFD4EE" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout Grid.Column="0">
+            <Label
+                Grid.Row="0"
+                Margin="60,20,300,20"
+                FontFamily="RalewayExtraBold"
+                FontSize="50"
+                HorizontalOptions="Start"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym"
+                TextColor="#05299E" />
+
+            <Label
+                Grid.Row="0"
+                Margin="250,170,20,20"
+                FontFamily="RalewayBold"
+                FontSize="48"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Sign in"
+                TextColor="Black" />
+            <Label
+                Margin="60,0,60,20"
+                FontFamily="RalewayRegular"
+                FontSize="24"
+                Text="Student ID"
+                TextColor="Black" />
+            <Entry
+                Margin="60,0,60,20"
+                FontFamily="RalewayRegular"
+                Placeholder="StudentID"
+                Text="{Binding StudentID}"
+                TextColor="Black" />
+            <Label
+                Margin="60,0,60,20"
+                FontFamily="RalewayRegular"
+                FontSize="24"
+                Text="Password"
+                TextColor="Black" />
+            <Entry
+                Margin="60,0,60,20"
+                FontFamily="RalewayRegular"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}"
+                TextColor="Black" />
+            <HorizontalStackLayout Margin="0,0,0,20" HorizontalOptions="Start">
+                <CheckBox Margin="60,0,0,0" IsChecked="False" />
+                <Label
+                    Margin="0,10,0,0"
+                    FontFamily="RalewaySemiBold"
+                    FontSize="20"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Remember me"
+                    TextColor="Black" />
+                <Label
+                    Margin="100,10,0,0"
+                    FontFamily="RalewaySemiBold"
+                    FontSize="20"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Forgot password?"
+                    TextColor="Black" />
+
+            </HorizontalStackLayout>
+            <Button
+                Margin="60,10,20,20"
+                Command="{Binding LoginCommand}"
+                HeightRequest="50"
+                HorizontalOptions="Start"
+                WidthRequest="200">
+                <Button.Text>Sign in</Button.Text>
+                <Button.TextColor>White</Button.TextColor>
+                <Button.FontSize>24</Button.FontSize>
+                <Button.FontFamily>RalewaySemiBold</Button.FontFamily>
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0.0" Color="#7B90D7" />
+                        <GradientStop Offset="1.0" Color="#FFA9DD" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button
+                Margin="60,10,20,20"
+                Command="{Binding CreateAccountCommand}"
+                HeightRequest="50"
+                HorizontalOptions="Start"
+                WidthRequest="200">
+                <Button.Text>Create Account</Button.Text>
+                <Button.TextColor>White</Button.TextColor>
+                <Button.FontSize>24</Button.FontSize>
+                <Button.FontFamily>RalewaySemiBold</Button.FontFamily>
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0.0" Color="#7B90D7" />
+                        <GradientStop Offset="1.0" Color="#FFA9DD" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </StackLayout>
+
+        <Grid Grid.Column="1">
+
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFill"
+                HorizontalOptions="End"
+                Source="group421.png" />
+        </Grid>
+        <Label
+            Margin="750,199,73,587"
+            FontFamily="RalewaySemiBold"
+            FontSize="64"
+            Text="Hope you enjoy it."
+            TextColor="Black" />
+    </Grid>
+
+</ContentPage>
