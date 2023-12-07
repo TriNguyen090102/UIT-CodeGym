@@ -85,7 +85,8 @@
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
                         HorizontalOptions="Start"
-                        Text="Allow yourself to be a beginner.&#x0a;No one starts off being excellent"
+                        Text="We advance in study when we &#x0a;let go of the fear"
+                        LineHeight="1.5"
                         TextColor="Black" />
                     <Image
                         HeightRequest="250"
@@ -233,7 +234,7 @@
                         Grid.Row="0"
                         Margin="20"
                         FontFamily="RalewayExtraBold"
-                        FontSize="40"
+                        FontSize="35"
                         Text="Encapsulation"
                         TextColor="Black" />
                     <HorizontalStackLayout
@@ -338,7 +339,7 @@
                     x:Name="Polymorphism"
                     HeightRequest="200"
                     WidthRequest="300"
-                    Color="#DCDFF1" />
+                    Color="#DCDFF1"/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -350,7 +351,7 @@
                         Grid.Row="0"
                         Margin="20"
                         FontFamily="RalewayExtraBold"
-                        FontSize="40"
+                        FontSize="35"
                         Text="Polymorphism"
                         TextColor="Black" />
                     <HorizontalStackLayout

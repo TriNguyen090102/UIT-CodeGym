@@ -11,7 +11,7 @@ public partial class App : Application
         RealmApp = Realms.Sync.App.Create(AppConfig.RealmAppId);
 
         //MainPage = new AppShell();
-        MainPage = new PracticeAdvancedPage();
+        MainPage = new PracticeImmediatePage();
     }
 }
 

@@ -15,244 +15,189 @@
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <VerticalStackLayout HorizontalOptions="FillAndExpand">
-                <HorizontalStackLayout>
-                    <Label
-                        Margin="20"
-                        FontFamily="RalewayExtraBold"
-                        FontSize="50"
-                        HorizontalTextAlignment="Start"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="UITCodeGym"
-                        TextColor="#05299E" />
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Test">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Forum">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                 Margin="20"
+                 FontFamily="RalewayExtraBold"
+                 FontSize="50"
+                 HorizontalOptions="StartAndExpand"
+                 HorizontalTextAlignment="Start"
+                 SemanticProperties.HeadingLevel="Level1"
+                 Text="UITCodeGym"
+                 TextColor="#05299E" />
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+                <Button
+    Margin="0,0,0,0"
+    Background="Transparent"
+    HorizontalOptions="End"
+    Text="Test">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+    Margin="0,0,0,0"
+    Background="Transparent"
+    CornerRadius="15"
+    HorizontalOptions="End"
+    Text="About">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <ImageButton
+    Background="Transparent"
+    HeightRequest="50"
+    Source="user.png"
+    WidthRequest="30" />
+                <Button
+    Margin="0,0,0,0"
+    Background="Transparent"
+    HorizontalOptions="End"
+    Text="Log out">
+                    <Button.FontSize>20</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+            </HorizontalStackLayout>
 
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        CornerRadius="15"
-                        HorizontalOptions="End"
-                        Text="About">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-                    <ImageButton
-                        Background="Transparent"
-                        HeightRequest="50"
-                        Source="user.png"
-                        WidthRequest="50" />
-
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Log out">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" WidthRequest="-1">
-                    <Image
-                        Margin="20,0,0,0"
-                        HeightRequest="600"
-                        HorizontalOptions="Center"
-                        Source="online_learning.png"
-                        WidthRequest="600" />
-                    <VerticalStackLayout Margin="0,100,0,0" HorizontalOptions="Center">
-                        <Label
-                            Margin="20"
-                            FontFamily="RalewayBold"
-                            FontSize="50"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="We envision a world where anyone,"
-                            TextColor="Black"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Margin="110,20,20,20"
-                            FontFamily="RalewayBold"
-                            FontSize="50"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="anywhere has the power to"
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            Margin="190,20,20,20"
-                            FontFamily="RalewayBold"
-                            FontSize="50"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="transform their lives"
-                            TextColor="Black" />
-                        <Label
-                            Margin="220,20,20,20"
-                            FontFamily="RalewayBold"
-                            FontSize="50"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="through learning."
-                            TextColor="Black" />
-                    </VerticalStackLayout>
-
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout
-                    Margin="100,50,0,0"
-                    HorizontalOptions="Start"
-                    WidthRequest="-1">
-
-                    <VerticalStackLayout
-                        Margin="0,100,0,0"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Start">
-                        <Label
-                            Margin="0,0,0,30"
-                            FontFamily="RalewaySemiBold"
-                            FontSize="40"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="Our story,"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,20,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="UITCodeGym was established in October 2023 by TMTTeam. Our"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="mission is to provide a useful platform to help UIT students"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="practice and prepare effectively for the school's programming"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="competency assessment. As of today, the platform has been"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="widely adopted by new students and is highly praised for its "
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="usefulness and convenience. We will strive to further develop the"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="platform with more features and increased convenience in the."
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,10,0,0"
-                            FontFamily="RalewayRegular"
-                            FontSize="32"
-                            HorizontalOptions="Start"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Text="future."
-                            TextColor="Black" />
-                    </VerticalStackLayout>
-                    <Image
-                        HeightRequest="500"
-                        HorizontalOptions="End"
-                        Source="ask.png"
-                        WidthRequest="500" />
-
-
-
-                </HorizontalStackLayout>
-                <VerticalStackLayout
-                    Margin="0,200,0,50"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-
-                    <Label
-                        FontFamily="RalewayBold"
-                        FontSize="20"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Email: phongdaotaodh@uit.edu.vn"
-                        TextColor="Black" />
-
-
-                </VerticalStackLayout>
-
+            <VerticalStackLayout Grid.Row="1">
+                <Image Source="online_learning.png"
+                       WidthRequest="450"
+                       HorizontalOptions="Center"/>
             </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand">
+                <Label Text="We envision a world where anyone,anywhere has the power to transform their lives 
+through learning. "
+                       FontFamily="RalewayExtraBold"
+                       TextColor="Black"
+                       FontSize="35"
+                       HorizontalOptions="Start"
+                       LineHeight="1.5"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="2" Margin="80,0">
+                <Label Text="Our Story"
+                       FontSize="30"
+                       FontFamily="Raleway-SemiBold"
+                       TextColor="Black"/>
+
+                <Label Text="UITCodeGym was established in October 2023 by TMTTeam."
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+                <Label Text="Our mission is to provide a useful platform to help UIT students"
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+
+
+                <Label Text="practice and prepare effectively for the school's programming "
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+
+                <Label Text="competency assessment. As of today, the platform has been "
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+
+                <Label Text="widely adopted by new students and is highly praised for its"
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+
+                <Label Text="usefulness and convenience. We will strive to further develop the"
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+
+                <Label Text="platform with more features and increased convenience in the future."
+                       TextColor="Black"
+                       FontSize="20"
+                       FontFamily="Raleway-Regular"
+                       HorizontalOptions="Start"
+                       Margin="0,10"/>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="2" Grid.Column="1">
+                <Image Source="ask.png"
+                       WidthRequest="400"/>
+            </HorizontalStackLayout>
+
+            <Label
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Margin="0,200,0,10"
+            FontFamily="RalewayExtraBold"
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+            <Label
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            FontFamily="RalewayRegular"
+            HorizontalOptions="CenterAndExpand"
+            Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
+            TextColor="Black"
+            VerticalOptions="CenterAndExpand" />
+
+            <Label
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Margin="0,10,0,0"
+            FontFamily="RalewayRegular"
+            HorizontalOptions="CenterAndExpand"
+            Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
+            TextColor="Black"
+            VerticalOptions="CenterAndExpand" />
+
+            <Label
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            Margin="0,10,0,0"
+            FontFamily="RalewayRegular"
+            HorizontalOptions="CenterAndExpand"
+            Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
+            TextColor="Black"
+            VerticalOptions="CenterAndExpand" />
+
+            <Label
+            Grid.Row="7"
+            Grid.ColumnSpan="2"
+            Margin="0,10,0,40"
+            FontFamily="RalewayRegular"
+            HorizontalOptions="CenterAndExpand"
+            Text="Email: phongdaotaodh@uit.edu.vn"
+            TextColor="Black"
+            VerticalOptions="CenterAndExpand" />
         </Grid>
     </ScrollView>
 

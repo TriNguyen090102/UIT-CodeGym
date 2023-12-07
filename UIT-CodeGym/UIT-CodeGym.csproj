@@ -107,6 +107,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\ask.png" />
+	  <None Remove="Resources\Images\astronaut.png" />
 	  <None Remove="Resources\Images\digital_library.png" />
 	  <None Remove="Resources\Images\loginbackground.png" />
 	  <None Remove="Resources\Fonts\static\Raleway-BoldItalic.ttf" />
@@ -134,6 +135,7 @@
 	  <None Remove="Resources\Images\group42.svg" />
 	  <None Remove="Resources\Images\group421.svg" />
 	  <None Remove="Resources\Images\regulation.png" />
+	  <None Remove="Resources\Images\smartwatch.png" />
 	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Resources\Images\design-software.svg" />
 	  <None Remove="Resources\Images\latenight.svg" />

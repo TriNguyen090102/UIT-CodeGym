@@ -85,7 +85,7 @@
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
                         HorizontalOptions="Start"
-                        Text="Allow yourself to be a beginner.&#x0a;No one starts off being excellent"
+                        Text="When you change your thoughts, &#x0a;remember to also change &#x0a;your world"
                         TextColor="Black" />
                     <Image
                         HeightRequest="250"
