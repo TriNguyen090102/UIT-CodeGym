@@ -6,20 +6,13 @@
     xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
     Title="IntroductionPage"
     x:DataType="vm:IntroductionVM"
-    BackgroundColor="White"
-    Shell.NavBarIsVisible="false">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Image
-            x:Name="backgroundImage"
-            Aspect="AspectFill"
-            HorizontalOptions="Start"
-            Source="background.png" />
-        <VerticalStackLayout VerticalOptions="Start">
-            <Label
+    BackgroundColor="Transparent"
+    Shell.NavBarIsVisible="false" >
+    
+    <Grid CompressedLayout.IsHeadless="True">
+
+        <Image Source="background.jpg" Aspect="AspectFill" />
+        <Label
                 Margin="20"
                 FontFamily="RalewayExtraBold"
                 FontSize="50"
@@ -27,8 +20,10 @@
                 SemanticProperties.HeadingLevel="Level1"
                 Text="UITCodeGym"
                 TextColor="#05299E" />
+        <VerticalStackLayout >
+            
             <Label
-                Margin="20,60,20,0"
+                Margin="20,150,20,0"
                 FontFamily="RalewaySemiBold"
                 FontSize="70"
                 HorizontalOptions="Start"
@@ -85,19 +80,15 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
+            
         </VerticalStackLayout>
-
-        <VerticalStackLayout
-            Grid.Row="1"
-            Margin="20,0,0,20"
-            VerticalOptions="End">
-            <Label
+        <Label
+                Margin="20,0,0,20"
                 FontFamily="RalewaySemiBold"
                 FontSize="36"
                 Text="UIT - Chọn để dẫn đầu"
-                TextColor="Black" />
-
-        </VerticalStackLayout>
+                TextColor="Black"
+                VerticalOptions="End"/>
     </Grid>
 </ContentPage>
+

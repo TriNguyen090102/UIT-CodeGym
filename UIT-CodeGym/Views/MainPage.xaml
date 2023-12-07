@@ -11,11 +11,19 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
@@ -23,19 +31,20 @@
                     <GradientStop Offset="1" Color="#FFD4EE" />
                 </LinearGradientBrush>
             </Grid.Background>
-            <VerticalStackLayout Grid.Column="0" VerticalOptions="Start">
 
-                <HorizontalStackLayout>
-                    <Label
-                        Margin="20,20,500,30"
+                <Label
+                        Margin="20"
                         FontFamily="RalewayExtraBold"
                         FontSize="50"
+                        HorizontalOptions="StartAndExpand"
                         HorizontalTextAlignment="Start"
                         SemanticProperties.HeadingLevel="Level1"
                         Text="UITCodeGym"
                         TextColor="#05299E" />
+                <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                    
                     <Button
-                        Margin="150,0,0,0"
+                        Margin="0,0,0,0"
                         Background="Transparent"
                         HorizontalOptions="End"
                         Text="Test">
@@ -80,64 +89,34 @@
                     </Button>
 
                 </HorizontalStackLayout>
-                <Label
-                    Margin="180,100,20,0"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="48"
-                    HorizontalOptions="Start"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="DISCOVERING TO"
-                    TextColor="Black" />
-
-                <Label
-                    Margin="180,0,20,0"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="48"
-                    HorizontalOptions="Start"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="BECOME BETTER"
-                    TextColor="Black" />
-                <SearchBar
-                    Margin="180,60,50,60"
-                    BackgroundColor="White"
-                    Placeholder="Search for studying"
-                    PlaceholderColor="#9C8A8A" />
-                <Image Margin="20,50,20,100" Source="selflearning.png" />
-                <Label
-                    Margin="180,100,20,0"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="52"
-                    HorizontalOptions="Start"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="INTERMEDIATE"
-                    TextColor="Black" />
-                <Label
-                    Margin="180,30,20,0"
-                    FontFamily="RalewayMediumItalic"
-                    FontSize="28"
-                    Text="“Love what you are learning to do”"
-                    TextColor="Black" />
-                <Button
-                    Margin="250,50,50,60"
-                    CornerRadius="20"
-                    HorizontalOptions="Start"
-                    Text="          START          ">
-                    <Button.TextColor>White</Button.TextColor>
-                    <Button.FontSize>32</Button.FontSize>
-                    <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Offset="0.0" Color="#7B90D7" />
-                            <GradientStop Offset="1.0" Color="#FFA9DD" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-                <Image Margin="20,100,20,20" Source="onlineexam.png" />
-            </VerticalStackLayout>
-
-            <VerticalStackLayout Grid.Column="1">
-                <Image Margin="20,150,20,20" Source="designsoftware.png" />
-                <Label
+                <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                    <VerticalStackLayout  HorizontalOptions="Center" >
+                        <Label
+                            Margin="0,100,0,0"
+                            FontFamily="RalewayExtraBold"
+                            FontSize="48"
+                            Text="DISCOVERING TO"
+                            TextColor="Black" />
+                        <Label
+                            Margin="0,0,0,30"
+                            FontFamily="RalewayExtraBold"
+                            FontSize="48"
+                            Text="BECOME BETTER"
+                            TextColor="Black" />
+                         <SearchBar
+                            Margin="0,0,0,0"
+                            BackgroundColor="White"
+                            Placeholder="Search for studying"
+                            PlaceholderColor="#9C8A8A" />
+                        </VerticalStackLayout>
+                        <Image
+                        Margin="100,60,0,0"
+                        Source="designsoftware.png"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                    <Image Margin="20,50,20,100" Source="selflearning.png" />
+                    <VerticalStackLayout>
+                        <Label
                     Margin="20,150,200,20"
                     FontFamily="RalewayExtraBold"
                     FontSize="52"
@@ -160,7 +139,9 @@
                     Command="{Binding StartBeginnerPracticeCommand}"
                     CornerRadius="20"
                     HorizontalOptions="Start"
-                    Text="          START          ">
+                    Text="START"
+                    WidthRequest="250"
+                    HeightRequest="50">
                     <Button.TextColor>White</Button.TextColor>
                     <Button.FontSize>32</Button.FontSize>
                     <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
@@ -171,7 +152,47 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Image Margin="20,100,20,20" Source="latenight.png" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                    <VerticalStackLayout>
+                        <Label
+                    Margin="180,100,20,0"
+                    FontFamily="RalewayExtraBold"
+                    FontSize="52"
+                    HorizontalOptions="Start"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="INTERMEDIATE"
+                    TextColor="Black" />
+                <Label
+                    Margin="180,30,20,0"
+                    FontFamily="RalewayMediumItalic"
+                    FontSize="28"
+                    Text="“Love what you are learning to do”"
+                    TextColor="Black" />
+                <Button
+                    Margin="250,50,50,60"
+                    CornerRadius="20"
+                    HorizontalOptions="Start"
+                    Text="START"
+                    WidthRequest="250"
+                    HeightRequest="50">
+                    <Button.TextColor>White</Button.TextColor>
+                    <Button.FontSize>32</Button.FontSize>
+                    <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0.0" Color="#7B90D7" />
+                            <GradientStop Offset="1.0" Color="#FFA9DD" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                    </VerticalStackLayout>
+                    <Image Margin="20,100,20,20" Source="latenight.png" />
+                </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                 <Image Margin="20,100,20,20" Source="onlineexam.png" />
+            <VerticalStackLayout>
                 <Label
                     Margin="20,150,200,20"
                     FontFamily="RalewayExtraBold"
@@ -188,7 +209,9 @@
                     Margin="100,60,50,60"
                     CornerRadius="20"
                     HorizontalOptions="Start"
-                    Text="          START          ">
+                    Text="START"
+                    WidthRequest="250"
+                    HeightRequest="50">
                     <Button.TextColor>White</Button.TextColor>
                     <Button.FontSize>32</Button.FontSize>
                     <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
@@ -199,49 +222,57 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-            </VerticalStackLayout>
+               </VerticalStackLayout> 
+                </HorizontalStackLayout>
+            <Label
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="0,200,0,10"
+                FontFamily="RalewayExtraBold"
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
+                TextColor="Black"
+                VerticalOptions="Center" />
 
-            <HorizontalStackLayout Grid.Row="1" VerticalOptions="FillAndExpand">
-                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label
-                        FontFamily="RalewayBold"
-                        FontSize="20"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
-                        TextColor="Black" />
-                    <Label
-                        FontFamily="RalewayRegular"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="Email: phongdaotaodh@uit.edu.vn"
-                        TextColor="Black" />
+            <Label
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
 
+            <Label
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
 
-                </VerticalStackLayout>
-            </HorizontalStackLayout>
+            <Label
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="9"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,40"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Email: phongdaotaodh@uit.edu.vn"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
         </Grid>
 
     </ScrollView>

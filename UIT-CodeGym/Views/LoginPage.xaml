@@ -6,35 +6,31 @@
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:UIT_CodeGym.MVVM.ViewModels"
     Title="LoginPage"
+    BackgroundColor="Transparent"
     x:DataType="vm:LoginPageVM"
     Shell.NavBarIsVisible="false">
-
-
+    <Grid>
+    <Image
+                Source="background2.jpg"
+                Aspect="AspectFill"/>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
-                <GradientStop Offset="0" Color="#B8C1FF" />
-                <GradientStop Offset="1" Color="#FFD4EE" />
-            </LinearGradientBrush>
-        </Grid.Background>
-        <StackLayout Grid.Column="0">
-            <Label
-                Grid.Row="0"
-                Margin="60,20,300,20"
+        
+        <Label
+                Margin="20,20,0,0"
                 FontFamily="RalewayExtraBold"
                 FontSize="50"
                 HorizontalOptions="Start"
                 SemanticProperties.HeadingLevel="Level1"
                 Text="UITCodeGym"
                 TextColor="#05299E" />
+        <StackLayout Grid.Column="0" VerticalOptions="Center">
+            
 
             <Label
-                Grid.Row="0"
-                Margin="250,170,20,20"
+                Margin="200,50"
                 FontFamily="RalewayBold"
                 FontSize="48"
                 SemanticProperties.HeadingLevel="Level1"
@@ -47,7 +43,7 @@
                 Text="Student ID"
                 TextColor="Black" />
             <Entry
-                Margin="60,0,60,20"
+                Margin="60,0,100,20"
                 FontFamily="RalewayRegular"
                 Placeholder="StudentID"
                 Text="{Binding StudentID}"
@@ -59,7 +55,7 @@
                 Text="Password"
                 TextColor="Black" />
             <Entry
-                Margin="60,0,60,20"
+                Margin="60,0,100,20"
                 FontFamily="RalewayRegular"
                 IsPassword="True"
                 Placeholder="Password"
@@ -75,7 +71,7 @@
                     Text="Remember me"
                     TextColor="Black" />
                 <Label
-                    Margin="100,10,0,0"
+                    Margin="200,10,0,0"
                     FontFamily="RalewaySemiBold"
                     FontSize="20"
                     SemanticProperties.HeadingLevel="Level1"
@@ -83,12 +79,13 @@
                     TextColor="Black" />
 
             </HorizontalStackLayout>
+            <HorizontalStackLayout>
             <Button
                 Margin="60,10,20,20"
                 Command="{Binding LoginCommand}"
                 HeightRequest="50"
                 HorizontalOptions="Start"
-                WidthRequest="200">
+                WidthRequest="250">
                 <Button.Text>Sign in</Button.Text>
                 <Button.TextColor>White</Button.TextColor>
                 <Button.FontSize>24</Button.FontSize>
@@ -105,7 +102,7 @@
                 Command="{Binding CreateAccountCommand}"
                 HeightRequest="50"
                 HorizontalOptions="Start"
-                WidthRequest="200">
+                WidthRequest="250">
                 <Button.Text>Create Account</Button.Text>
                 <Button.TextColor>White</Button.TextColor>
                 <Button.FontSize>24</Button.FontSize>
@@ -117,23 +114,11 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
+                </HorizontalStackLayout>
         </StackLayout>
+            
 
-        <Grid Grid.Column="1">
-
-            <Image
-                Grid.Row="0"
-                Aspect="AspectFill"
-                HorizontalOptions="End"
-                Source="group421.png" />
-        </Grid>
-        <Label
-            Margin="750,199,73,587"
-            FontFamily="RalewaySemiBold"
-            FontSize="64"
-            Text="Hope you enjoy it."
-            TextColor="Black" />
     </Grid>
-
+    </Grid>
 </ContentPage>
+
