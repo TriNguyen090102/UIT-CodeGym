@@ -10,7 +10,8 @@ public partial class App : Application
 		InitializeComponent();
         RealmApp = Realms.Sync.App.Create(AppConfig.RealmAppId);
 
-        MainPage = new AppShell();
+        //MainPage = new AppShell();
+        MainPage = new PracticeAdvancedPage();
     }
 }
 

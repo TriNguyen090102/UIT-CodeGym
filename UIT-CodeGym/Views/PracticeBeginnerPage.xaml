@@ -163,7 +163,7 @@
                 Grid.Column="1"
                 Margin="20">
                 <BoxView
-                    x:Name="DataType"
+                    x:Name="DataTypes"
                     HeightRequest="200"
                     WidthRequest="300"
                     Color="#E1EEBC" />
@@ -191,7 +191,7 @@
                             WidthRequest="20" />
                         <Label
                             FontFamily="RalewayRegular"
-                            Text="20 Questions"
+                            Text="10 Questions"
                             TextColor="Black" />
                     </HorizontalStackLayout>
 
@@ -250,7 +250,7 @@
                             WidthRequest="20" />
                         <Label
                             FontFamily="RalewayRegular"
-                            Text="20 Questions"
+                            Text="10 Questions"
                             TextColor="Black" />
                     </HorizontalStackLayout>
 
@@ -296,7 +296,7 @@
                         Margin="20"
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
-                        Text="Operators"
+                        Text="Math"
                         TextColor="Black" />
                     <HorizontalStackLayout
                         Grid.Row="1"
@@ -308,7 +308,7 @@
                             WidthRequest="20" />
                         <Label
                             FontFamily="RalewayRegular"
-                            Text="20 Questions"
+                            Text="10 Questions"
                             TextColor="Black" />
                     </HorizontalStackLayout>
 
@@ -355,7 +355,7 @@
                         Margin="20"
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
-                        Text="Operators"
+                        Text="Variables"
                         TextColor="Black" />
                     <HorizontalStackLayout
                         Grid.Row="1"
@@ -367,7 +367,7 @@
                             WidthRequest="20" />
                         <Label
                             FontFamily="RalewayRegular"
-                            Text="20 Questions"
+                            Text="10 Questions"
                             TextColor="Black" />
                     </HorizontalStackLayout>
 
@@ -413,7 +413,7 @@
                         Margin="20"
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
-                        Text="Operators"
+                        Text="Condition"
                         TextColor="Black" />
                     <HorizontalStackLayout
                         Grid.Row="1"
@@ -425,7 +425,7 @@
                             WidthRequest="20" />
                         <Label
                             FontFamily="RalewayRegular"
-                            Text="20 Questions"
+                            Text="10 Questions"
                             TextColor="Black" />
                     </HorizontalStackLayout>
 
