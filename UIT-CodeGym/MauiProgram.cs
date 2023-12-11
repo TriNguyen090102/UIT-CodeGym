@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using UIT_CodeGym.MVVM.ViewModels;
 using UIT_CodeGym.MVVM.Views;
 using UIT_CodeGym.ViewModels;
+using UIT_CodeGym.Controls;
 
 namespace UIT_CodeGym;
 
@@ -31,7 +32,21 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPageVM>();
         builder.Services.AddSingleton<PracticeBeginnerPage>();
         builder.Services.AddSingleton<PracticeBeginnerPageVM>();
-         
+
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
+        {
+            if (view is BorderlessEntry)
+            {
+#if MACCATALYST
+handler.PlatformView.BackgroundColor = UIKit.UIColor.Clear;
+handler.PlatformView.Layer.BorderWidth = 0;
+handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
+#elif WINDOWS
+handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+#endif
+
+            }
+        });
 
         return builder.Build();
 	}
