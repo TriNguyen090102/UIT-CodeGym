@@ -1,16 +1,185 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="UIT_CodeGym.MVVM.Views.ForumPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:UIT_CodeGym.Controls"
     xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
     Title="ForumPage"
     x:DataType="vm:ForumPageVM"
     Shell.NavBarIsVisible="false">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
+                    <GradientStop Offset="0" Color="#B8C1FF" />
+                    <GradientStop Offset="1" Color="#FFD4EE" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Label
+                Margin="20"
+                FontFamily="RalewayExtraBold"
+                FontSize="50"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym"
+                TextColor="#05299E" />
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Test">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Forum">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="About">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <ImageButton
+                    Background="Transparent"
+                    HeightRequest="50"
+                    Source="user.png"
+                    WidthRequest="50" />
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Log out">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+            </HorizontalStackLayout>
+            <VerticalStackLayout
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0,100"
+                HorizontalOptions="Center">
+
+                <AbsoluteLayout>
+                    <BoxView
+                        CornerRadius="50"
+                        HeightRequest="500"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="900"
+                        Color="White" />
+                    <controls:BorderlessEntry
+                        x:Name="entry"
+                        Margin="50,20"
+                        ClearButtonVisibility="WhileEditing"
+                        FontFamily="RalewayRegular"
+                        FontSize="32"
+                        HeightRequest="450"
+                        HorizontalOptions="Center"
+                        Placeholder="Type your question"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        WidthRequest="800" />
+
+
+                </AbsoluteLayout>
+                <Button
+                    Margin="0,30"
+                    BackgroundColor="#9DA9D3"
+                    CornerRadius="20"
+                    FontFamily="RalewayExtraBold"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    Text="SUBMIT"
+                    TextColor="White"
+                    WidthRequest="150" />
+            </VerticalStackLayout>
+            <Label
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="0,200,0,10"
+                FontFamily="RalewayExtraBold"
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
+                TextColor="Black"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                Grid.Row="9"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,40"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Email: phongdaotaodh@uit.edu.vn"
+                TextColor="Black"
+                VerticalOptions="Center" />
+
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
