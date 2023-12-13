@@ -1,4 +1,6 @@
 ﻿using UIT_CodeGym.MVVM.Views;
+using UIT_CodeGym.ViewModels;
+
 namespace UIT_CodeGym;
 
 public partial class App : Application
@@ -10,8 +12,11 @@ public partial class App : Application
 		InitializeComponent();
         RealmApp = Realms.Sync.App.Create(AppConfig.RealmAppId);
 
-        //MainPage = new AppShell();
-        MainPage = new TestPage();
+        MainPage = new AppShell();
+        
+     
+    
+   
     }
 }
 

@@ -22,4 +22,30 @@
         ContentTemplate="{DataTemplate local:PracticeBeginnerPage}"
         Route="BeginnerPractice" />
 
+    <ShellContent
+        Title="ImmediatePractice"
+        ContentTemplate="{DataTemplate local:PracticeImmediatePage}"
+        Route="ImmediatePractice" />
+
+    <ShellContent
+        Title="AdvancedPractice"
+        ContentTemplate="{DataTemplate local:PracticeAdvancedPage}"
+        Route="AdvancedPractice" />
+
+
+
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:TestPage}"
+        Route="Test" />
+
+    <ShellContent
+        Title="Forum"
+        ContentTemplate="{DataTemplate local:ForumPage}"
+        Route="Forum" />
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate local:AboutPage}"
+        Route="About" />
+
 </Shell>

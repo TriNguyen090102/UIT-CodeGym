@@ -32,198 +32,215 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-                <Label
-                        Margin="20"
+            <Button
+                Margin="0,0,0,0"
+                Background="Transparent"
+                HorizontalOptions="StartAndExpand"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym">
+                <Button.FontSize>50</Button.FontSize>
+                <Button.TextColor>#05299E</Button.TextColor>
+                <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+            </Button>
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartTestCommand}"
+                    HorizontalOptions="End"
+                    Text="Test">
+
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartForumCommand}"
+                    HorizontalOptions="End"
+                    Text="Forum">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartAboutCommand}"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="About">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <ImageButton
+                    Background="Transparent"
+                    HeightRequest="50"
+                    Source="user.png"
+                    WidthRequest="50" />
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Log out">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand">
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label
+                        Margin="0,100,0,0"
                         FontFamily="RalewayExtraBold"
-                        FontSize="50"
-                        HorizontalOptions="StartAndExpand"
-                        HorizontalTextAlignment="Start"
-                        SemanticProperties.HeadingLevel="Level1"
-                        Text="UITCodeGym"
-                        TextColor="#05299E" />
-                <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" >
-                    
-                    <Button
+                        FontSize="48"
+                        Text="DISCOVERING TO"
+                        TextColor="Black" />
+                    <Label
+                        Margin="0,0,0,30"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="48"
+                        Text="BECOME BETTER"
+                        TextColor="Black" />
+                    <SearchBar
                         Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Test">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
+                        BackgroundColor="White"
+                        Placeholder="Search for studying"
+                        PlaceholderColor="#9C8A8A" />
+                </VerticalStackLayout>
+                <Image Margin="100,60,0,0" Source="designsoftware.png" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand">
+                <Image Margin="20,50,20,100" Source="selflearning.png" />
+                <VerticalStackLayout>
+                    <Label
+                        Margin="20,150,200,20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="52"
+                        Text="BEGINNER"
+                        TextColor="Black" />
+                    <Label
+                        Margin="20,20,20,0"
+                        FontFamily="RalewayMediumItalic"
+                        FontSize="28"
+                        Text="“Allow yourself to be a beginner"
+                        TextColor="Black" />
+                    <Label
+                        Margin="20,0,20,20"
+                        FontFamily="RalewayMediumItalic"
+                        FontSize="28"
+                        Text="No one starts off being excellent.”"
+                        TextColor="Black" />
                     <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Forum">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        CornerRadius="15"
-                        HorizontalOptions="End"
-                        Text="About">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
-                    </Button>
-                    <ImageButton
-                        Background="Transparent"
+                        Margin="100,20,50,60"
+                        Command="{Binding StartBeginnerPracticeCommand}"
+                        CornerRadius="20"
                         HeightRequest="50"
-                        Source="user.png"
-                        WidthRequest="50" />
-
-                    <Button
-                        Margin="0,0,0,0"
-                        Background="Transparent"
-                        HorizontalOptions="End"
-                        Text="Log out">
-                        <Button.FontSize>30</Button.FontSize>
-                        <Button.TextColor>Black</Button.TextColor>
-                        <Button.FontFamily>Raleway</Button.FontFamily>
+                        HorizontalOptions="Start"
+                        Text="START"
+                        WidthRequest="250">
+                        <Button.TextColor>White</Button.TextColor>
+                        <Button.FontSize>32</Button.FontSize>
+                        <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0.0" Color="#7B90D7" />
+                                <GradientStop Offset="1.0" Color="#FFA9DD" />
+                            </LinearGradientBrush>
+                        </Button.Background>
                     </Button>
-
-                </HorizontalStackLayout>
-                <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
-                    <VerticalStackLayout  HorizontalOptions="Center" >
-                        <Label
-                            Margin="0,100,0,0"
-                            FontFamily="RalewayExtraBold"
-                            FontSize="48"
-                            Text="DISCOVERING TO"
-                            TextColor="Black" />
-                        <Label
-                            Margin="0,0,0,30"
-                            FontFamily="RalewayExtraBold"
-                            FontSize="48"
-                            Text="BECOME BETTER"
-                            TextColor="Black" />
-                         <SearchBar
-                            Margin="0,0,0,0"
-                            BackgroundColor="White"
-                            Placeholder="Search for studying"
-                            PlaceholderColor="#9C8A8A" />
-                        </VerticalStackLayout>
-                        <Image
-                        Margin="100,60,0,0"
-                        Source="designsoftware.png"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
-                    <Image Margin="20,50,20,100" Source="selflearning.png" />
-                    <VerticalStackLayout>
-                        <Label
-                    Margin="20,150,200,20"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="52"
-                    Text="BEGINNER"
-                    TextColor="Black" />
-                <Label
-                    Margin="20,20,20,0"
-                    FontFamily="RalewayMediumItalic"
-                    FontSize="28"
-                    Text="“Allow yourself to be a beginner"
-                    TextColor="Black" />
-                <Label
-                    Margin="20,0,20,20"
-                    FontFamily="RalewayMediumItalic"
-                    FontSize="28"
-                    Text="No one starts off being excellent.”"
-                    TextColor="Black" />
-                <Button
-                    Margin="100,20,50,60"
-                    Command="{Binding StartBeginnerPracticeCommand}"
-                    CornerRadius="20"
-                    HorizontalOptions="Start"
-                    Text="START"
-                    WidthRequest="250"
-                    HeightRequest="50">
-                    <Button.TextColor>White</Button.TextColor>
-                    <Button.FontSize>32</Button.FontSize>
-                    <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Offset="0.0" Color="#7B90D7" />
-                            <GradientStop Offset="1.0" Color="#FFA9DD" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-                    </VerticalStackLayout>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
-                    <VerticalStackLayout>
-                        <Label
-                    Margin="180,100,20,0"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="52"
-                    HorizontalOptions="Start"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="INTERMEDIATE"
-                    TextColor="Black" />
-                <Label
-                    Margin="180,30,20,0"
-                    FontFamily="RalewayMediumItalic"
-                    FontSize="28"
-                    Text="“Love what you are learning to do”"
-                    TextColor="Black" />
-                <Button
-                    Margin="250,50,50,60"
-                    CornerRadius="20"
-                    HorizontalOptions="Start"
-                    Text="START"
-                    WidthRequest="250"
-                    HeightRequest="50">
-                    <Button.TextColor>White</Button.TextColor>
-                    <Button.FontSize>32</Button.FontSize>
-                    <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Offset="0.0" Color="#7B90D7" />
-                            <GradientStop Offset="1.0" Color="#FFA9DD" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-                    </VerticalStackLayout>
-                    <Image Margin="20,100,20,20" Source="latenight.png" />
-                </HorizontalStackLayout>
-            <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
-                 <Image Margin="20,100,20,20" Source="onlineexam.png" />
-            <VerticalStackLayout>
-                <Label
-                    Margin="20,150,200,20"
-                    FontFamily="RalewayExtraBold"
-                    FontSize="52"
-                    Text="ADVANCED"
-                    TextColor="Black" />
-                <Label
-                    Margin="20,20,20,0"
-                    FontFamily="RalewayMediumItalic"
-                    FontSize="28"
-                    Text="“The Advanced Level is Mastery of the Basics”"
-                    TextColor="Black" />
-                <Button
-                    Margin="100,60,50,60"
-                    CornerRadius="20"
-                    HorizontalOptions="Start"
-                    Text="START"
-                    WidthRequest="250"
-                    HeightRequest="50">
-                    <Button.TextColor>White</Button.TextColor>
-                    <Button.FontSize>32</Button.FontSize>
-                    <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Offset="0.0" Color="#7B90D7" />
-                            <GradientStop Offset="1.0" Color="#FFA9DD" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-               </VerticalStackLayout> 
-                </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Label
+                        Margin="180,100,20,0"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="52"
+                        HorizontalOptions="Start"
+                        SemanticProperties.HeadingLevel="Level1"
+                        Text="INTERMEDIATE"
+                        TextColor="Black" />
+                    <Label
+                        Margin="180,30,20,0"
+                        FontFamily="RalewayMediumItalic"
+                        FontSize="28"
+                        Text="“Love what you are learning to do”"
+                        TextColor="Black" />
+                    <Button
+                        Margin="250,50,50,60"
+                        Command="{Binding StartImmediatePracticeCommand}"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        Text="START"
+                        WidthRequest="250">
+                        <Button.TextColor>White</Button.TextColor>
+                        <Button.FontSize>32</Button.FontSize>
+                        <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0.0" Color="#7B90D7" />
+                                <GradientStop Offset="1.0" Color="#FFA9DD" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </VerticalStackLayout>
+                <Image Margin="20,100,20,20" Source="latenight.png" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand">
+                <Image Margin="20,100,20,20" Source="onlineexam.png" />
+                <VerticalStackLayout>
+                    <Label
+                        Margin="20,150,200,20"
+                        FontFamily="RalewayExtraBold"
+                        FontSize="52"
+                        Text="ADVANCED"
+                        TextColor="Black" />
+                    <Label
+                        Margin="20,20,20,0"
+                        FontFamily="RalewayMediumItalic"
+                        FontSize="28"
+                        Text="“The Advanced Level is Mastery of the Basics”"
+                        TextColor="Black" />
+                    <Button
+                        Margin="100,60,50,60"
+                        Command="{Binding StartAdvancePracticeCommand}"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        Text="START"
+                        WidthRequest="250">
+                        <Button.TextColor>White</Button.TextColor>
+                        <Button.FontSize>32</Button.FontSize>
+                        <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0.0" Color="#7B90D7" />
+                                <GradientStop Offset="1.0" Color="#FFA9DD" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
             <Label
                 Grid.Row="5"
                 Grid.ColumnSpan="2"

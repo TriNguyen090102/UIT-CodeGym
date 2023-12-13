@@ -1,17 +1,16 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.Input;
-
 using UIT_CodeGym.MVVM.ViewModels;
 
 namespace UIT_CodeGym.ViewModels
 {
-    public partial class PracticeBeginnerPageVM : BaseViewModel
+    public partial class TestPageVM : BaseViewModel
     {
-        public PracticeBeginnerPageVM() { }
+        public TestPageVM() { }
         [RelayCommand]
         public static async void StartForum()
         {
@@ -29,8 +28,14 @@ namespace UIT_CodeGym.ViewModels
         public static async void StartAbout()
         {
             await Shell.Current.GoToAsync("///About");
-
         }
+        [RelayCommand]
+        public static async void StartMain()
+        {
+            await Shell.Current.GoToAsync("///Main");
+        }
+
+
 
     }
 }

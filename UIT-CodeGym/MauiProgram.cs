@@ -31,7 +31,18 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPageVM>();
         builder.Services.AddSingleton<PracticeBeginnerPage>();
         builder.Services.AddSingleton<PracticeBeginnerPageVM>();
-         
+        builder.Services.AddSingleton<PracticeImmediatePage>();
+        builder.Services.AddSingleton<PracticeImmediatePageVM>();
+        builder.Services.AddSingleton<PracticeAdvancedPage>();
+        builder.Services.AddSingleton<PracticeAdvancedPageVM>();
+        builder.Services.AddSingleton<AboutPage>();
+        builder.Services.AddSingleton<AboutPageVM>();
+        builder.Services.AddSingleton<TestPage>();
+        builder.Services.AddSingleton<TestPageVM>();
+        builder.Services.AddSingleton<ForumPage>();
+        builder.Services.AddSingleton<ForumPageVM>();
+
+
 
         return builder.Build();
 	}

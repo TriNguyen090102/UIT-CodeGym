@@ -3,7 +3,11 @@
     x:Class="UIT_CodeGym.MVVM.Views.AboutPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="AboutPage">
+    xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+    Title="AboutPage"
+    x:DataType="vm:AboutPageVM"
+    BackgroundColor="Transparent"
+    Shell.NavBarIsVisible="false">
 
     <ScrollView>
         <Grid>
@@ -24,180 +28,209 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label
-                 Margin="20"
-                 FontFamily="RalewayExtraBold"
-                 FontSize="50"
-                 HorizontalOptions="StartAndExpand"
-                 HorizontalTextAlignment="Start"
-                 SemanticProperties.HeadingLevel="Level1"
-                 Text="UITCodeGym"
-                 TextColor="#05299E" />
+            <Button
+                Margin="0,0,0,0"
+                Background="Transparent"
+                Command="{Binding StartMainCommand}"
+                HorizontalOptions="StartAndExpand"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym">
+                <Button.FontSize>50</Button.FontSize>
+                <Button.TextColor>#05299E</Button.TextColor>
+                <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+            </Button>
             <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+
                 <Button
-    Margin="0,0,0,0"
-    Background="Transparent"
-    HorizontalOptions="End"
-    Text="Test">
-                    <Button.FontSize>20</Button.FontSize>
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartTestCommand}"
+                    HorizontalOptions="End"
+                    Text="Test">
+
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
                 <Button
-    Margin="0,0,0,0"
-    Background="Transparent"
-    CornerRadius="15"
-    HorizontalOptions="End"
-    Text="About">
-                    <Button.FontSize>20</Button.FontSize>
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartForumCommand}"
+                    HorizontalOptions="End"
+                    Text="Forum">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="About">
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
                 <ImageButton
-    Background="Transparent"
-    HeightRequest="50"
-    Source="user.png"
-    WidthRequest="30" />
+                    Background="Transparent"
+                    HeightRequest="50"
+                    Source="user.png"
+                    WidthRequest="50" />
+
                 <Button
-    Margin="0,0,0,0"
-    Background="Transparent"
-    HorizontalOptions="End"
-    Text="Log out">
-                    <Button.FontSize>20</Button.FontSize>
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Log out">
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
+
             </HorizontalStackLayout>
 
             <VerticalStackLayout Grid.Row="1">
-                <Image Source="online_learning.png"
-                       WidthRequest="450"
-                       HorizontalOptions="Center"/>
+                <Image
+                    HorizontalOptions="Center"
+                    Source="online_learning.png"
+                    WidthRequest="450" />
             </VerticalStackLayout>
 
-            <VerticalStackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand">
-                <Label Text="We envision a world where anyone,anywhere has the power to transform their lives 
-through learning. "
-                       FontFamily="RalewayExtraBold"
-                       TextColor="Black"
-                       FontSize="35"
-                       HorizontalOptions="Start"
-                       LineHeight="1.5"/>
+            <VerticalStackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    FontFamily="RalewayExtraBold"
+                    FontSize="35"
+                    HorizontalOptions="Start"
+                    LineHeight="1.5"
+                    Text="We envision a world where anyone,anywhere has the power to transform their lives  through learning. "
+                    TextColor="Black" />
             </VerticalStackLayout>
 
             <VerticalStackLayout Grid.Row="2" Margin="80,0">
-                <Label Text="Our Story"
-                       FontSize="30"
-                       FontFamily="Raleway-SemiBold"
-                       TextColor="Black"/>
+                <Label
+                    FontFamily="Raleway-SemiBold"
+                    FontSize="30"
+                    Text="Our Story"
+                    TextColor="Black" />
 
-                <Label Text="UITCodeGym was established in October 2023 by TMTTeam."
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
-                <Label Text="Our mission is to provide a useful platform to help UIT students"
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="UITCodeGym was established in October 2023 by TMTTeam."
+                    TextColor="Black" />
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="Our mission is to provide a useful platform to help UIT students"
+                    TextColor="Black" />
 
 
-                <Label Text="practice and prepare effectively for the school's programming "
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="practice and prepare effectively for the school's programming "
+                    TextColor="Black" />
 
-                <Label Text="competency assessment. As of today, the platform has been "
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="competency assessment. As of today, the platform has been "
+                    TextColor="Black" />
 
-                <Label Text="widely adopted by new students and is highly praised for its"
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="widely adopted by new students and is highly praised for its"
+                    TextColor="Black" />
 
-                <Label Text="usefulness and convenience. We will strive to further develop the"
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="usefulness and convenience. We will strive to further develop the"
+                    TextColor="Black" />
 
-                <Label Text="platform with more features and increased convenience in the future."
-                       TextColor="Black"
-                       FontSize="20"
-                       FontFamily="Raleway-Regular"
-                       HorizontalOptions="Start"
-                       Margin="0,10"/>
+                <Label
+                    Margin="0,10"
+                    FontFamily="Raleway-Regular"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="platform with more features and increased convenience in the future."
+                    TextColor="Black" />
             </VerticalStackLayout>
 
             <HorizontalStackLayout Grid.Row="2" Grid.Column="1">
-                <Image Source="ask.png"
-                       WidthRequest="400"/>
+                <Image Source="ask.png" WidthRequest="400" />
             </HorizontalStackLayout>
 
             <Label
-            Grid.Row="3"
-            Grid.ColumnSpan="2"
-            Margin="0,200,0,10"
-            FontFamily="RalewayExtraBold"
-            FontSize="20"
-            HorizontalOptions="CenterAndExpand"
-            Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
-            TextColor="Black"
-            VerticalOptions="Center" />
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="0,200,0,10"
+                FontFamily="RalewayExtraBold"
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                Text="PHÒNG ĐÀO TẠO ĐẠI HỌC"
+                TextColor="Black"
+                VerticalOptions="Center" />
 
             <Label
-            Grid.Row="4"
-            Grid.ColumnSpan="2"
-            FontFamily="RalewayRegular"
-            HorizontalOptions="CenterAndExpand"
-            Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
-            TextColor="Black"
-            VerticalOptions="CenterAndExpand" />
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Phòng A120, Trường Đại học Công nghệ Thông tin."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
 
             <Label
-            Grid.Row="5"
-            Grid.ColumnSpan="2"
-            Margin="0,10,0,0"
-            FontFamily="RalewayRegular"
-            HorizontalOptions="CenterAndExpand"
-            Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
-            TextColor="Black"
-            VerticalOptions="CenterAndExpand" />
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
 
             <Label
-            Grid.Row="6"
-            Grid.ColumnSpan="2"
-            Margin="0,10,0,0"
-            FontFamily="RalewayRegular"
-            HorizontalOptions="CenterAndExpand"
-            Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
-            TextColor="Black"
-            VerticalOptions="CenterAndExpand" />
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Điện thoại: (028) 372 51993, Ext: 113(Hệ từ xa qua mạng), 112(Hệ chính quy)."
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
 
             <Label
-            Grid.Row="7"
-            Grid.ColumnSpan="2"
-            Margin="0,10,0,40"
-            FontFamily="RalewayRegular"
-            HorizontalOptions="CenterAndExpand"
-            Text="Email: phongdaotaodh@uit.edu.vn"
-            TextColor="Black"
-            VerticalOptions="CenterAndExpand" />
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,40"
+                FontFamily="RalewayRegular"
+                HorizontalOptions="CenterAndExpand"
+                Text="Email: phongdaotaodh@uit.edu.vn"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
         </Grid>
     </ScrollView>
 

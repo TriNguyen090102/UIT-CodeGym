@@ -1,17 +1,16 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.Input;
-
 using UIT_CodeGym.MVVM.ViewModels;
 
 namespace UIT_CodeGym.ViewModels
 {
-    public partial class PracticeBeginnerPageVM : BaseViewModel
+    public partial class PracticeImmediatePageVM :BaseViewModel
     {
-        public PracticeBeginnerPageVM() { }
+        public PracticeImmediatePageVM() { }
         [RelayCommand]
         public static async void StartForum()
         {

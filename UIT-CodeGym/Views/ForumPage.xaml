@@ -3,7 +3,10 @@
     x:Class="UIT_CodeGym.MVVM.Views.ForumPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="ForumPage">
+    xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+    Title="ForumPage"
+    x:DataType="vm:ForumPageVM"
+    Shell.NavBarIsVisible="false">
     <VerticalStackLayout>
         <Label
             HorizontalOptions="Center"

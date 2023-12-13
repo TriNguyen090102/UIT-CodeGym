@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using Amazon.Runtime.Internal.Util;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,38 @@ namespace UIT_CodeGym.ViewModels
         [RelayCommand]
         public static async void StartImmediatePractice()
         {
+            await Shell.Current.GoToAsync("///ImmediatePractice");
+
         }
         [RelayCommand]
         public static async void StartAdvancePractice()
         {
+            await Shell.Current.GoToAsync("///AdvancePractice");
+
         }
+        [RelayCommand]
+        public static async void StartForum()
+        {
+            await Shell.Current.GoToAsync("///Forum");
+
+        }
+        [RelayCommand]
+        public static async void StartTest()
+        {
+            await Shell.Current.GoToAsync("///Test");
+
+        }
+
+        [RelayCommand]
+        public static async void StartAbout()
+        {
+           
+                await Shell.Current.GoToAsync("///About");
+            
+            
+            
+        }
+
+
     }
 }

@@ -7,21 +7,21 @@
     Title="IntroductionPage"
     x:DataType="vm:IntroductionVM"
     BackgroundColor="Transparent"
-    Shell.NavBarIsVisible="false" >
-    
+    Shell.NavBarIsVisible="false">
+
     <Grid CompressedLayout.IsHeadless="True">
 
-        <Image Source="background.jpg" Aspect="AspectFill" />
+        <Image Aspect="AspectFill" Source="background.jpg" />
         <Label
-                Margin="20"
-                FontFamily="RalewayExtraBold"
-                FontSize="50"
-                HorizontalOptions="Start"
-                SemanticProperties.HeadingLevel="Level1"
-                Text="UITCodeGym"
-                TextColor="#05299E" />
-        <VerticalStackLayout >
-            
+            Margin="20"
+            FontFamily="RalewayExtraBold"
+            FontSize="50"
+            HorizontalOptions="Start"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="UITCodeGym"
+            TextColor="#05299E" />
+        <VerticalStackLayout>
+
             <Label
                 Margin="20,150,20,0"
                 FontFamily="RalewaySemiBold"
@@ -80,15 +80,15 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            
+
         </VerticalStackLayout>
         <Label
-                Margin="20,0,0,20"
-                FontFamily="RalewaySemiBold"
-                FontSize="36"
-                Text="UIT - Chọn để dẫn đầu"
-                TextColor="Black"
-                VerticalOptions="End"/>
+            Margin="20,0,0,20"
+            FontFamily="RalewaySemiBold"
+            FontSize="36"
+            Text="UIT - Chọn để dẫn đầu"
+            TextColor="Black"
+            VerticalOptions="End" />
     </Grid>
 </ContentPage>
 

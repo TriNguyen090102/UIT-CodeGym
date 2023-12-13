@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UIT_CodeGym.MVVM.Views.PracticeAdvancedPage"
-             Title="PracticeAdvancedPage">
+<ContentPage
+    x:Class="UIT_CodeGym.MVVM.Views.PracticeAdvancedPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+    Title="PracticeAdvancedPage"
+    x:DataType="vm:PracticeAdvancedPageVM"
+    Shell.NavBarIsVisible="false">
     <ScrollView>
         <Grid>
             <Grid.Background>
@@ -28,33 +32,48 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label
-                Margin="20"
-                FontFamily="RalewayExtraBold"
-                FontSize="50"
+            <Button
+                Margin="0,0,0,0"
+                Background="Transparent"
                 HorizontalOptions="StartAndExpand"
-                HorizontalTextAlignment="Start"
                 SemanticProperties.HeadingLevel="Level1"
-                Text="UITCodeGym"
-                TextColor="#05299E" />
-
+                Text="UITCodeGym">
+                <Button.FontSize>50</Button.FontSize>
+                <Button.TextColor>#05299E</Button.TextColor>
+                <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+            </Button>
             <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+
                 <Button
                     Margin="0,0,0,0"
                     Background="Transparent"
+                    Command="{Binding StartTestCommand}"
                     HorizontalOptions="End"
                     Text="Test">
-                    <Button.FontSize>20</Button.FontSize>
+
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
                 <Button
                     Margin="0,0,0,0"
                     Background="Transparent"
+                    Command="{Binding StartForumCommand}"
+                    HorizontalOptions="End"
+                    Text="Forum">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartAboutCommand}"
                     CornerRadius="15"
                     HorizontalOptions="End"
                     Text="About">
-                    <Button.FontSize>20</Button.FontSize>
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
@@ -62,16 +81,18 @@
                     Background="Transparent"
                     HeightRequest="50"
                     Source="user.png"
-                    WidthRequest="30" />
+                    WidthRequest="50" />
+
                 <Button
                     Margin="0,0,0,0"
                     Background="Transparent"
                     HorizontalOptions="End"
                     Text="Log out">
-                    <Button.FontSize>20</Button.FontSize>
+                    <Button.FontSize>30</Button.FontSize>
                     <Button.TextColor>Black</Button.TextColor>
                     <Button.FontFamily>Raleway</Button.FontFamily>
                 </Button>
+
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Grid.Row="1" HorizontalOptions="StartAndExpand">
@@ -85,8 +106,8 @@
                         FontFamily="RalewayExtraBold"
                         FontSize="40"
                         HorizontalOptions="Start"
-                        Text="We advance in study when we &#x0a;let go of the fear"
                         LineHeight="1.5"
+                        Text="We advance in study when we &#x0a;let go of the fear"
                         TextColor="Black" />
                     <Image
                         HeightRequest="250"
@@ -339,7 +360,7 @@
                     x:Name="Polymorphism"
                     HeightRequest="200"
                     WidthRequest="300"
-                    Color="#DCDFF1"/>
+                    Color="#DCDFF1" />
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
