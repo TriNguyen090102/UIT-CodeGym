@@ -140,6 +140,7 @@
 	  <None Remove="Resources\Images\design-software.svg" />
 	  <None Remove="Resources\Images\latenight.svg" />
 	  <None Remove="Resources\Images\online-exam.svg" />
+	  <None Remove="Resources\Images\SendButton.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -179,5 +180,6 @@
 	  <BundleResource Include="Resources\Images\designsoftware.svg" />
 	  <BundleResource Include="Resources\Images\latenight.svg" />
 	  <BundleResource Include="Resources\Images\onlineexam.svg" />
+	  <BundleResource Include="Resources\Images\sendbutton.jpg" />
 	</ItemGroup>
 </Project>

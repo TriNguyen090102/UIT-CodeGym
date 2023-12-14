@@ -8,9 +8,9 @@ using UIT_CodeGym.MVVM.ViewModels;
 
 namespace UIT_CodeGym.ViewModels
 {
-    public partial class TestPageVM : BaseViewModel
+    public partial class QuizPageVM : BaseViewModel
     {
-        public TestPageVM() { }
+        public QuizPageVM() { }
         [RelayCommand]
         public static async void StartForum()
         {
@@ -35,11 +35,7 @@ namespace UIT_CodeGym.ViewModels
             await Shell.Current.GoToAsync("///Main");
         }
 
-        [RelayCommand]
-        public static async void StartQuiz()
-        {
-            await Shell.Current.GoToAsync("///Quiz");
-        }
+
 
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="UIT_CodeGym.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -32,7 +32,10 @@
         ContentTemplate="{DataTemplate local:PracticeAdvancedPage}"
         Route="AdvancedPractice" />
 
-
+    <ShellContent
+        Title="Quiz"
+        ContentTemplate="{DataTemplate local:QuizPage}"
+        Route="Quiz" />
 
     <ShellContent
         Title="Test"

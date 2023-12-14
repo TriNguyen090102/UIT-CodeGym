@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:UIT_CodeGym.Controls"
+             xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+             x:Class="UIT_CodeGym.MVVM.Views.QuizPage"
+                Title="QuizPage"
+                x:DataType="vm:QuizPageVM"
+                Shell.NavBarIsVisible="false">
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Offset="0.0" Color="#7E7CD1" />
+                    <GradientStop Offset="1.0" Color="#F2CDEF" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Margin="0,0,0,0"
+                Background="Transparent"
+                Command="{Binding StartMainCommand}"
+                HorizontalOptions="StartAndExpand"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym">
+                <Button.FontSize>50</Button.FontSize>
+                <Button.TextColor>#05299E</Button.TextColor>
+                <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
+            </Button>
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartTestCommand}"
+                    HorizontalOptions="End"
+                    Text="Test">
+
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartForumCommand}"
+                    HorizontalOptions="End"
+                    Text="Forum">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartAboutCommand}"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="About">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <ImageButton
+                    Background="Transparent"
+                    HeightRequest="50"
+                    Source="user.png"
+                    WidthRequest="50" />
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Log out">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+
+            </HorizontalStackLayout>
+            <Grid
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Margin="100,100">
+                <controls:Components/>
+            </Grid>
+        <Button
+                Grid.ColumnSpan="2"
+                Grid.Row="9"
+                HeightRequest="50"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Text="SUBMIT"
+                TextColor="White"
+                FontFamily="RalewayExtraBold"
+                FontSize="30"
+                BackgroundColor="#9DA9D3"
+                />
+        </Grid>
+    </ScrollView>
+</ContentPage>

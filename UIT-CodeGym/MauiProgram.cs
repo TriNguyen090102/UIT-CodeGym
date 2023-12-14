@@ -42,7 +42,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<TestPageVM>();
         builder.Services.AddSingleton<ForumPage>();
         builder.Services.AddSingleton<ForumPageVM>();
-
+        builder.Services.AddSingleton<QuizPage>();
+        builder.Services.AddSingleton<QuizPageVM>();
 
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>
