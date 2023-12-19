@@ -119,6 +119,7 @@
 
                 </AbsoluteLayout>
                 <Button
+                    x:Name="SubmitBtn"
                     Margin="0,30"
                     BackgroundColor="#9DA9D3"
                     CornerRadius="20"

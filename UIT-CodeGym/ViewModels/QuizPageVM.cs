@@ -54,18 +54,6 @@ namespace UIT_CodeGym.ViewModels
             }
         }
 
-        public void Test()
-        {
-            string data = "";
-            foreach(QuestionModel qs in OperatorQuestions)
-            {
-                data += qs.question;
-            }
-            Shell.Current.DisplayAlert(data, "", "exit");
-        }
-
-
-
 
         [RelayCommand]
         public static async void StartForum()

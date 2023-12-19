@@ -8,5 +8,7 @@ public partial class ForumPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = vm;
+		
+		
 	}
 }
