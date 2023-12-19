@@ -18,17 +18,25 @@ namespace UIT_CodeGym.database
         private IMongoDatabase db;
 
         public QuestionsService() {
-            setUpDB();
+            SetUpDB();
         }
 
-        private void setUpDB()
+        private void SetUpDB()
         {
             client = new MongoClient("mongodb+srv://admin1:admin123@cluster0.ud0f6fw.mongodb.net/?retryWrites=true&w=majority");
             db = client.GetDatabase("UIT-CodeGym");
         }
 
+        public bool IsAdmin(string username) {
+            var adminCollection = db.GetCollection<UserModel>("AdminAcount");
+            var filter = Builders<UserModel>.Filter.Eq("user", username);
+            var documents = adminCollection.Find(filter).ToList();
+            if (documents.Count > 0) { return true; }
+            
+            return false;
+        }
 
-         public System.Collections.Generic.List<QuestionModel> fetchOperatorsQuestions() 
+         public System.Collections.Generic.List<QuestionModel> FetchOperatorsQuestions() 
         {
             var operatorsQuestionCollection =  db.GetCollection<QuestionModel>("QuestionDB");
             var filter =  Builders<QuestionModel>.Filter.Eq("title", "operators"); ;
@@ -37,7 +45,7 @@ namespace UIT_CodeGym.database
             return documents;
         }
 
-        public System.Collections.Generic.List<QuestionModel> fetchPointerQuestions()
+        public System.Collections.Generic.List<QuestionModel> FetchPointerQuestions()
         {
             var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
             var filter = Builders<QuestionModel>.Filter.Eq("title", "pointer"); ;
@@ -46,7 +54,7 @@ namespace UIT_CodeGym.database
             return documents;
         }
 
-        public System.Collections.Generic.List<QuestionModel> fetchSwitchQuestions()
+        public System.Collections.Generic.List<QuestionModel> FetchSwitchQuestions()
         {
             var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
             var filter = Builders<QuestionModel>.Filter.Eq("title", "switch"); ;

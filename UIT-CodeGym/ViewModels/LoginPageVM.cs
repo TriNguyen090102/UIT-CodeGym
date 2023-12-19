@@ -7,10 +7,7 @@ using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Realms.Sync;
-
-
-
-
+using UIT_CodeGym.database;
 
 namespace UIT_CodeGym.MVVM.ViewModels
 {
@@ -48,9 +45,17 @@ namespace UIT_CodeGym.MVVM.ViewModels
             try
             {
                 var user = await App.RealmApp.LogInAsync(Credentials.EmailPassword(StudentID, Password));
-
-                if (user != null)
+                var service = new QuestionsService();
+                var isAdmin = service.IsAdmin(StudentID);
+                if (user != null && !isAdmin)
                 {
+                    await Shell.Current.GoToAsync("///Main");
+                    StudentID = "";
+                    Password = "";
+                }
+                else if(user != null && isAdmin)
+                {
+                    //await Shell.Current.GoToAsync("///Forum");
                     await Shell.Current.GoToAsync("///Main");
                     StudentID = "";
                     Password = "";

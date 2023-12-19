@@ -1,4 +1,6 @@
-﻿using UIT_CodeGym.ViewModels;
+﻿using Microsoft.Maui.Controls.Platform;
+using UIT_CodeGym.database;
+using UIT_CodeGym.ViewModels;
 
 namespace UIT_CodeGym.MVVM.Views;
 
@@ -8,5 +10,6 @@ public partial class QuizPage : ContentPage
     {
         InitializeComponent();
         BindingContext = vm;
+        vm.PopulateOperatorQuestions();
     }
 }
