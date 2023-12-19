@@ -11,5 +11,6 @@ public partial class QuizPage : ContentPage
         InitializeComponent();
         BindingContext = vm;
         vm.PopulateOperatorQuestions();
+        vm.Test();
     }
 }

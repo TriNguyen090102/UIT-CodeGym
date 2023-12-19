@@ -10,7 +10,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace UIT_CodeGym.Models
 {
     
-    class QuestionModel
+    public class QuestionModel
     {
 
         [BsonRepresentation(BsonType.ObjectId)]

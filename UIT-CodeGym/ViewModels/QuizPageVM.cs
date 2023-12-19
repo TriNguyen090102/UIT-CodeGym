@@ -2,6 +2,8 @@
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,29 +15,23 @@ namespace UIT_CodeGym.ViewModels
 {
     public partial class QuizPageVM : BaseViewModel
     {
+        public ObservableCollection<QuestionModel> OperatorQuestions { get; set; }
+        public ObservableCollection<QuestionModel> PointerQuestions { get; set; }
+        public ObservableCollection<QuestionModel> SwitchQuestions { get; set; }
 
-       
-
-
-        [ObservableProperty]
-        List<QuestionModel> operatorQuestions;
-        [ObservableProperty]
-        List<QuestionModel> pointerQuestions;
-        [ObservableProperty]
-        List<QuestionModel> switchQuestions;
         public QuizPageVM() {
-            operatorQuestions = new List<QuestionModel>();
-            pointerQuestions = new List<QuestionModel>();
-            switchQuestions = new List<QuestionModel>();
+            OperatorQuestions = new ObservableCollection<QuestionModel>();
+            PointerQuestions = new ObservableCollection<QuestionModel>();
+            SwitchQuestions = new ObservableCollection<QuestionModel>();
         }
 
         QuestionsService service = new QuestionsService();
         public void PopulateOperatorQuestions()
         {
             var documents = service.FetchOperatorsQuestions();
-            foreach(QuestionModel qs in documents)
+            foreach (QuestionModel qs in documents)
             {
-                operatorQuestions.Add(qs);
+                OperatorQuestions.Add(qs);
             }
         }
 
@@ -44,7 +40,7 @@ namespace UIT_CodeGym.ViewModels
             var documents = service.FetchSwitchQuestions();
             foreach (QuestionModel qs in documents)
             {
-                switchQuestions.Add(qs);
+                SwitchQuestions.Add(qs);
             }
         }
 
@@ -54,8 +50,18 @@ namespace UIT_CodeGym.ViewModels
             var documents = service.FetchPointerQuestions();
             foreach (QuestionModel qs in documents)
             {
-                pointerQuestions.Add(qs);
+                PointerQuestions.Add(qs);
             }
+        }
+
+        public void Test()
+        {
+            string data = "";
+            foreach(QuestionModel qs in OperatorQuestions)
+            {
+                data += qs.question;
+            }
+            Shell.Current.DisplayAlert(data, "", "exit");
         }
 
 
