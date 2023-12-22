@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIT_CodeGym.MVVM.ViewModels;
+using UIT_CodeGym.Services;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -25,7 +26,7 @@ namespace UIT_CodeGym.ViewModels
         [RelayCommand]
         public static async void StartAdvancePractice()
         {
-            await Shell.Current.GoToAsync("///AdvancePractice");
+            await Shell.Current.GoToAsync("///AdvancedPractice");
 
         }
         [RelayCommand]
@@ -45,6 +46,13 @@ namespace UIT_CodeGym.ViewModels
         public static async void StartAbout()
         {
                 await Shell.Current.GoToAsync("///About");
+
+        }
+        [RelayCommand]
+        public static async void LogOut()
+        {
+            await Shell.Current.GoToAsync("///Introduction");
+            AppProperties.UserName = "";
         }
 
 

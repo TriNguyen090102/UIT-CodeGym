@@ -27,6 +27,23 @@ namespace UIT_CodeGym.database
             db = client.GetDatabase("UIT-CodeGym");
         }
 
+        public async Task<bool> InsertQuestionToQuestionDB(QuestionModel newQuestion)
+        {
+            var questionCollection = db.GetCollection<QuestionModel>("QuestionDB");
+            try
+            {
+                await questionCollection.InsertOneAsync(newQuestion);
+                return true; // Indicate success
+            }
+            catch (Exception ex)
+            {
+                // Handle any potential exceptions appropriately
+                //Console.WriteLine("Error inserting question: {0}", ex.Message);
+                return false; // Indicate failure
+            }
+        }
+
+
         public bool IsAdmin(string username) {
             var adminCollection = db.GetCollection<UserModel>("AdminAcount");
             var filter = Builders<UserModel>.Filter.Eq("user", username);

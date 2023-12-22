@@ -4,6 +4,7 @@ using UIT_CodeGym.MVVM.ViewModels;
 using UIT_CodeGym.MVVM.Views;
 using UIT_CodeGym.ViewModels;
 using UIT_CodeGym.Controls;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace UIT_CodeGym;
 
@@ -12,7 +13,8 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+        builder.ConfigureSyncfusionCore();
+        builder
 			.UseMauiApp<App>()
 			.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
@@ -44,6 +46,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<ForumPageVM>();
         builder.Services.AddSingleton<QuizPage>();
         builder.Services.AddSingleton<QuizPageVM>();
+        builder.Services.AddSingleton<AddQuestionsPage>();
+        builder.Services.AddSingleton<AddQuestionsPageVM>();
 
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Borderless", (handler, view) =>

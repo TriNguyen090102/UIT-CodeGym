@@ -8,6 +8,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Realms.Sync;
 using UIT_CodeGym.database;
+using UIT_CodeGym.Services;
 
 namespace UIT_CodeGym.MVVM.ViewModels
 {
@@ -50,13 +51,15 @@ namespace UIT_CodeGym.MVVM.ViewModels
                 if (user != null && !isAdmin)
                 {
                     await Shell.Current.GoToAsync("///Main");
+                    AppProperties.UserName = StudentID;
                     StudentID = "";
                     Password = "";
                 }
                 else if(user != null && isAdmin)
                 {
                     //await Shell.Current.GoToAsync("///Forum");
-                    await Shell.Current.GoToAsync("///Main");
+                    await Shell.Current.GoToAsync("///AddQuestions");
+                    AppProperties.UserName = StudentID;
                     StudentID = "";
                     Password = "";
                 }

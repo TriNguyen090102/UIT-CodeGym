@@ -1,5 +1,6 @@
 
 using UIT_CodeGym.MVVM.Views;
+using UIT_CodeGym.ViewModels;
 
 namespace UIT_CodeGym;
 
@@ -18,6 +19,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(TestPage), typeof(TestPage));
         Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
         Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage));
+        Routing.RegisterRoute(nameof(AddQuestionsPage), typeof(AddQuestionsPageVM));
+
 
     }
 }
