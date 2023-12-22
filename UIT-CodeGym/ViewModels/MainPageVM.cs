@@ -44,11 +44,7 @@ namespace UIT_CodeGym.ViewModels
         [RelayCommand]
         public static async void StartAbout()
         {
-           
                 await Shell.Current.GoToAsync("///About");
-            
-            
-            
         }
 
 

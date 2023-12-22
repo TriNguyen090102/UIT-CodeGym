@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,24 @@ namespace UIT_CodeGym.ViewModels
     public partial class ForumPageVM : BaseViewModel
     {
         public ForumPageVM() { }
+
+        [RelayCommand]
+        public static async void StartForum()
+        {
+            await Shell.Current.GoToAsync("///Forum");
+
+        }
+        [RelayCommand]
+        public static async void StartTest()
+        {
+            await Shell.Current.GoToAsync("///Test");
+
+        }
+
+        [RelayCommand]
+        public static async void StartAbout()
+        {
+            await Shell.Current.GoToAsync("///About");
+        }
     }
 }
