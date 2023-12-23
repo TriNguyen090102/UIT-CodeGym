@@ -86,62 +86,62 @@
                            FontSize="48"/>
           <VerticalStackLayout
                     Margin="25,35,0,20"
-                    Spacing="15">
+                    Spacing="15" IsEnabled="True">
         <Button
-                x:Name="{Binding answerA}"
                 Text="{Binding a}"
                 TextColor="Black"
-                Clicked="OnButtonClicked"
+                Command="{Binding ButtonClickACommand}"
+                Clicked="ButtonClickedA"
+                CommandParameter="{Binding .}"
                 FontFamily="RalewaySemiBold"
+                BackgroundColor="White"
                 FontSize="30"
                 HeightRequest="80"
                 WidthRequest="650"
-                CornerRadius="30"
-                BackgroundColor="White"/>
+                CornerRadius="30"/>
         <Button
-                x:Name="AnswerB"
                 Text="{Binding b}"
-                Clicked="OnButtonClicked"
+                Command="{Binding ButtonClickBCommand}"
+                CommandParameter="{Binding .}"
                 TextColor="Black"
                 FontFamily="RalewaySemiBold"
+                BackgroundColor="White"
                 FontSize="30"
                 HeightRequest="80"
                 WidthRequest="650"
-                CornerRadius="30"
-                BackgroundColor="White"/>
+                CornerRadius="30"/>
         <Button
-                x:Name="AnswerC"
                 Text="{Binding c}"
+                Command="{Binding ButtonClickCCommand}"
+                CommandParameter="{Binding .}"
                 TextColor="Black"
-                Clicked="OnButtonClicked"
+                BackgroundColor="White"
                 FontFamily="RalewaySemiBold"
                 FontSize="30"
                 HeightRequest="80"
                 WidthRequest="650"
-                CornerRadius="30"
-                BackgroundColor="White"/>
+                CornerRadius="30"/>
         <Button
-                x:Name="AnswerD"
                 Text="{Binding d}"
                 TextColor="Black"
-                Clicked="OnButtonClicked"
+                Command="{Binding ButtonClickDCommand}"
+                CommandParameter="{Binding .}"
+                BackgroundColor="White"
                 FontFamily="RalewaySemiBold"
                 FontSize="30"
                 HeightRequest="80"
                 WidthRequest="650"
-                CornerRadius="30"
-                BackgroundColor="White"/>
+                CornerRadius="30"/>
                 </VerticalStackLayout>
                 <ImageButton
                     x:Name="sendbutton"
+                    Command="{Binding SendButtonClickCommand}"
                     HorizontalOptions="Center"
-                    Clicked="sendbutton_Clicked"
                     Source="sendbutton.png"
                     HeightRequest="50"
                     WidthRequest="50"
                     BackgroundColor="Transparent"
                     />
-            
                 </VerticalStackLayout>
 
                 </ViewCell>
