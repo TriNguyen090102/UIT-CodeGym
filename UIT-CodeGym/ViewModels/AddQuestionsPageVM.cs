@@ -132,7 +132,7 @@ namespace UIT_CodeGym.ViewModels
                 }
                 else
                 {
-                    Shell.Current.DisplayAlert("Insert Faile", "Something wrong happened, please try again", "OK");
+                    Shell.Current.DisplayAlert("Insert Failed", "Something wrong happened, please try again", "OK");
                 }
 
                 AnswerA = "";
