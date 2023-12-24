@@ -35,5 +35,7 @@ namespace UIT_CodeGym.Models
 
         [BsonElement("correct_answer")]
         public string correct_answer { get; set; }
+        public string SelectedAnswer { get; set; }
+        public Button[] buttonClicked { get; set; }
     }
 }
