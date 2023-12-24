@@ -18,7 +18,6 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -90,9 +89,7 @@
         <Button
                 Text="{Binding a}"
                 TextColor="Black"
-                Command="{Binding ButtonClickACommand}"
-                Clicked="ButtonClickedA"
-                CommandParameter="{Binding .}"
+                Clicked="Button_ClickedA"
                 FontFamily="RalewaySemiBold"
                 BackgroundColor="White"
                 FontSize="30"
@@ -101,10 +98,9 @@
                 CornerRadius="30"/>
         <Button
                 Text="{Binding b}"
-                Command="{Binding ButtonClickBCommand}"
-                CommandParameter="{Binding .}"
                 TextColor="Black"
                 FontFamily="RalewaySemiBold"
+                Clicked="Button_ClickedB"
                 BackgroundColor="White"
                 FontSize="30"
                 HeightRequest="80"
@@ -112,9 +108,8 @@
                 CornerRadius="30"/>
         <Button
                 Text="{Binding c}"
-                Command="{Binding ButtonClickCCommand}"
-                CommandParameter="{Binding .}"
                 TextColor="Black"
+                Clicked="Button_ClickedC"
                 BackgroundColor="White"
                 FontFamily="RalewaySemiBold"
                 FontSize="30"
@@ -124,8 +119,7 @@
         <Button
                 Text="{Binding d}"
                 TextColor="Black"
-                Command="{Binding ButtonClickDCommand}"
-                CommandParameter="{Binding .}"
+                Clicked="Button_ClickedD"
                 BackgroundColor="White"
                 FontFamily="RalewaySemiBold"
                 FontSize="30"
@@ -135,7 +129,6 @@
                 </VerticalStackLayout>
                 <ImageButton
                     x:Name="sendbutton"
-                    Command="{Binding SendButtonClickCommand}"
                     HorizontalOptions="Center"
                     Source="sendbutton.png"
                     HeightRequest="50"
@@ -161,8 +154,7 @@
             WidthRequest="200"
             CornerRadius="30"
             Grid.ColumnSpan="2"
-            Grid.Row="4"
-            Margin="0,0,0,50"
+            Grid.Row="3"
             TextColor="Black"
             BackgroundColor="#E1EEBC"/>
     </Grid>
