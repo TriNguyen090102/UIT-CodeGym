@@ -82,7 +82,6 @@
                         IsEnabled="True"
                         Spacing="15">
                         <Button
-                            x:Name="1a"
                             BackgroundColor="White"
                             Clicked="Question1_Handle_Clicked"
                             CornerRadius="30"
@@ -197,6 +196,7 @@
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
                 BackgroundColor="#E1EEBC"
+                Clicked="OnFinish"
                 CornerRadius="30"
                 FontFamily="RalewaySemiBold"
                 FontSize="35"
