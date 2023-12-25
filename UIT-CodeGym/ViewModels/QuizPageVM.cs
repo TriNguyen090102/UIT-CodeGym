@@ -21,22 +21,22 @@ namespace UIT_CodeGym.ViewModels
             OperatorQuestions = new ObservableCollection<QuestionModel>();
             PointerQuestions = new ObservableCollection<QuestionModel>();
             SwitchQuestions = new ObservableCollection<QuestionModel>();
-           
-        }
-        public Button preButton()
-        {
-            return null;
-        }
+                   }
+    
         QuestionsService service = new QuestionsService();
-        public void PopulateOperatorQuestions()
+        public List<QuestionModel> PopulateOperatorQuestions()
         {
+            List<QuestionModel> questions = new List<QuestionModel>();
             var documents = service.FetchOperatorsQuestions();
             foreach (QuestionModel qs in documents)
             {
                 OperatorQuestions.Add(qs);
-                preButton();
+                questions.Add(qs);
             }
+
+            return questions;
         }
+
 
         public void PopulatePointerQuestions()
         {
@@ -85,6 +85,9 @@ namespace UIT_CodeGym.ViewModels
         {
             await Shell.Current.GoToAsync("///Main");
         }
+
+
+       
     }
     
 }
