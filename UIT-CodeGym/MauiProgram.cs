@@ -46,6 +46,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<ForumPageVM>();
         builder.Services.AddSingleton<QuizPage>();
         builder.Services.AddSingleton<QuizPageVM>();
+        builder.Services.AddSingleton<SummaryPage>();
+        builder.Services.AddSingleton<SummaryPageVM>();
         builder.Services.AddSingleton<AddQuestionsPage>();
         builder.Services.AddSingleton<AddQuestionsPageVM>();
 

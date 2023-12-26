@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UIT_CodeGym.MVVM.Views.SummaryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UIT_CodeGym.ViewModels"
+    xmlns:page="clr-namespace:Microsoft.Maui.Controls.Xaml.Internals;assembly=Microsoft.Maui.Controls.Xaml"
+    Title="SummaryPage"
+    x:DataType="vm:SummaryPageVM"
+    Shell.NavBarIsVisible="False">
+    <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Margin="20"
+                FontFamily="RalewayExtraBold"
+                FontSize="50"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="UITCodeGym"
+                TextColor="#05299E" />
+            <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" >
+
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    Command="{Binding StartMainCommand}"
+                    CornerRadius="15"
+                    HorizontalOptions="End"
+                    Text="Main Page">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+                <Button
+                    Margin="0,0,0,0"
+                    Background="Transparent"
+                    HorizontalOptions="End"
+                    Text="Practice Again">
+                    <Button.FontSize>30</Button.FontSize>
+                    <Button.TextColor>Black</Button.TextColor>
+                    <Button.FontFamily>Raleway</Button.FontFamily>
+                </Button>
+            </HorizontalStackLayout>
+            <VerticalStackLayout  Grid.Row="1"
+                                  Grid.Column="0"
+                                  VerticalOptions="Center"
+                                  HorizontalOptions="Center">
+                  <Label Text="YOU NEED TO&#x0a;PRACTICE MORE TO &#x0a;GET HIGH SCORE."
+                   FontSize="70"
+                   FontFamily="RalewayExtraBold"
+                   Margin="40"/>
+
+                  <Frame HeightRequest="300"
+                           WidthRequest="300"
+                           CornerRadius="150"
+                           >
+                <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
+                    <GradientStop Offset="0" Color="#B8C1FF" />
+                    <GradientStop Offset="1" Color="#FFD4EE" />
+                </LinearGradientBrush>
+                    </Frame.Background>
+                        <Label Text="5/10"
+                              FontSize="100"
+                              HorizontalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand"
+                              FontFamily="RalewayExtraBold"
+                              TextColor="Black"
+                              />
+                   </Frame>
+                   <Label Margin="50"
+                          Text="Performance Stats"
+                          HorizontalOptions="Center"
+                          FontFamily="RalewayMedium"
+                          FontSize="31"/>
+            <HorizontalStackLayout Spacing="20"
+                                   HorizontalOptions="Center">
+                    <Frame HeightRequest="72"
+                           WidthRequest="228"
+                           BackgroundColor="#46C579">
+                    <VerticalStackLayout Margin="-10">
+                    <Label Text="2"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="RalewayMedium"
+                           FontSize="32"/>
+                    <Label Text="Correct"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="RalewayBold"
+                           FontSize="14"/>
+                    </VerticalStackLayout>
+                    </Frame>
+                    <Frame HeightRequest="72"
+                           WidthRequest="228"
+                           BackgroundColor="#F34B4B">
+                    <VerticalStackLayout Margin="-10">
+                    <Label Text="2"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="RalewayMedium"
+                           FontSize="32"/>
+                    <Label Text="Incorrect"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="RalewayBold"
+                           FontSize="14"/>
+                    </VerticalStackLayout>
+                    </Frame>
+                </HorizontalStackLayout>
+        </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="1"
+                                 VerticalOptions="Center"
+                                  HorizontalOptions="Center">
+            <Frame
+                HeightRequest="750"
+                WidthRequest="650"
+                CornerRadius="30">
+                <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
+                    <GradientStop Offset="0" Color="#B8C1FF" />
+                    <GradientStop Offset="1" Color="#FFD4EE" />
+                </LinearGradientBrush>
+                    </Frame.Background>
+                <VerticalStackLayout>
+                <Label Text="RECORD"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="StartAndExpand"
+                           FontFamily="RalewayBold"
+                           FontSize="48"
+                           Margin="0,0,0,10"/>
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="140">
+                    <Label Text="RANK"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="StartAndExpand"
+                           FontFamily="RalewayBold"
+                           FontSize="30"
+                           />
+                    <Label Text="SCORE"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="StartAndExpand"
+                           FontFamily="RalewayBold"
+                           FontSize="30"/>
+                    <Label Text="TIME"
+                           FontFamily="RalewayBold"
+                           FontSize="30"/>
+                        </HorizontalStackLayout>
+                    <ListView
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                     >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                    <HorizontalStackLayout Spacing="20"
+                                                           HorizontalOptions="CenterAndExpand">
+                                        <Frame HeightRequest="127"
+                                           WidthRequest="128"
+                                           BackgroundColor="White"
+                                           CornerRadius="20">
+                                            <Label Text="Rank"
+                                                   FontFamily="RalewayBold"
+                                                   FontSize="64"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                                            </Frame>
+                                    <Frame HeightRequest="127"
+                                           WidthRequest="224"
+                                           BackgroundColor="White"
+                                           CornerRadius="20">
+                                            <Label Text="Score"
+                                                   FontFamily="RalewayBold"
+                                                   FontSize="64"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                                            </Frame>
+                                        <Frame HeightRequest="127"
+                                           WidthRequest="179"
+                                           BackgroundColor="White"
+                                           CornerRadius="20">
+                                            <Label Text="Time"
+                                                   FontFamily="RalewayBold"
+                                                   FontSize="64"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                                            </Frame>
+                                    </HorizontalStackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                </ListView>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

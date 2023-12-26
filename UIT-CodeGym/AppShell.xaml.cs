@@ -20,6 +20,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
         Routing.RegisterRoute(nameof(QuizPage), typeof(QuizPage));
         Routing.RegisterRoute(nameof(AddQuestionsPage), typeof(AddQuestionsPageVM));
+        Routing.RegisterRoute(nameof(SummaryPage), typeof(SummaryPage));
 
 
     }

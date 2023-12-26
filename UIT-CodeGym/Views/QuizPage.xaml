@@ -8,7 +8,7 @@
     x:DataType="vm:QuizPageVM"
     Shell.NavBarIsVisible="false">
     <ScrollView>
-        <Grid>
+        <Grid x:Name="MyGrid">
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
                     <GradientStop Offset="0" Color="#B8C1FF" />
@@ -37,6 +37,7 @@
                 TextColor="#05299E" />
 
             <Button
+                Grid.Row="0"
                 Grid.Column="1"
                 Margin="0,0,20,0"
                 Background="Transparent"
@@ -56,7 +57,10 @@
                 Text="TEST 1" />
 
             <!--  questions view  -->
-            <VerticalStackLayout>
+            <VerticalStackLayout
+                Grid.ColumnSpan="2"
+                Grid.Row="2"
+                HorizontalOptions="Center">
                 <VerticalStackLayout
                     x:Name="Question1"
                     Margin="0,0,0,50"
@@ -189,10 +193,539 @@
                             WidthRequest="650" />
                     </VerticalStackLayout>
                 </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question3"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 3:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[1].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion3"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question3_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[2].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question3_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[2].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question3_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[2].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question3_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[2].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question4"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 4:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[3].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion4"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question4_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[3].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question4_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[3].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question4_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[3].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question4_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[3].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question5"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 5:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[4].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion5"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question5_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[4].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question5_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[4].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question5_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[4].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question5_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[4].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question6"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 6:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[5].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion6"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question6_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[5].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question6_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[5].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question6_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[5].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question6_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[5].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question7"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 7:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[6].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion7"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question7_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[6].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question7_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[6].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question7_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[6].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question7_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[6].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question8"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 8:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[7].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion8"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question8_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[7].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question8_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[7].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question8_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[7].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question8_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[7].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question9"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 9:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[8].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion9"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question9_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[8].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question9_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[8].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question9_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[8].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question9_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[8].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+                    x:Name="Question10"
+                    Margin="0,0,0,50"
+                    HorizontalOptions="Center">
+                    <Label
+                        Margin="0,0,0,20"
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewaySemiBold"
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        Text="Question 10:"
+                        TextColor="Black" />
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="RalewayBold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Text="{Binding OperatorQuestions[9].question}"
+                        TextColor="Black" />
+                    <VerticalStackLayout
+                        x:Name="ButtonQuestion10"
+                        Margin="25,35,0,20"
+                        IsEnabled="True"
+                        Spacing="15">
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question10_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[9].a}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question10_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[9].b}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question10_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[9].c}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                        <Button
+                            BackgroundColor="White"
+                            Clicked="Question10_Handle_Clicked"
+                            CornerRadius="30"
+                            FontFamily="RalewaySemiBold"
+                            FontSize="30"
+                            HeightRequest="80"
+                            Text="{Binding OperatorQuestions[9].d}"
+                            TextColor="Black"
+                            WidthRequest="650" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
             </VerticalStackLayout>
-
+            
             <Button
                 x:Name="FinishBtn"
+                Margin="0,0,0,50"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
                 BackgroundColor="#E1EEBC"
@@ -204,6 +737,26 @@
                 Text="FINISH"
                 TextColor="Black"
                 WidthRequest="200" />
+            <HorizontalStackLayout
+                x:Name="SummaryBtn"
+                HorizontalOptions="End" Grid.Row="3"
+                Grid.ColumnSpan="2">
+            <Button
+                
+                Command="{Binding StartSummaryCommand}"
+                Margin="0,0,50,50"
+                Text="Summary"
+                TextColor="Black"
+                BackgroundColor="White"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HeightRequest="70"
+                WidthRequest="120"
+                CornerRadius="30"
+                FontFamily="RalewaySemiBold"
+                FontSize="20"
+                HorizontalOptions="End"/>
+                </HorizontalStackLayout>
         </Grid>
     </ScrollView>
 

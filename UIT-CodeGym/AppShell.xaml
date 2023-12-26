@@ -50,8 +50,10 @@
         Title="About"
         ContentTemplate="{DataTemplate local:AboutPage}"
         Route="About" />
-
-
+    <ShellContent
+        Title="Summary"
+        ContentTemplate="{DataTemplate local:SummaryPage}"
+        Route="Summary" />
     <ShellContent
         Title="AddQuestions"
         ContentTemplate="{DataTemplate local:AddQuestionsPage}"

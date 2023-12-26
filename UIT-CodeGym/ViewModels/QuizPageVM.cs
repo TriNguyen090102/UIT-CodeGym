@@ -6,7 +6,6 @@ using Microsoft.Maui.Controls;
 using UIT_CodeGym.database;
 using UIT_CodeGym.Models;
 using UIT_CodeGym.MVVM.ViewModels;
-using System.Windows.Input;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -86,8 +85,12 @@ namespace UIT_CodeGym.ViewModels
             await Shell.Current.GoToAsync("///Main");
         }
 
+        [RelayCommand]
+        public static async void StartSummary()
+        {
+            await Shell.Current.GoToAsync("///Summary");
+        }
 
-       
     }
     
 }
