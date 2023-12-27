@@ -9,7 +9,7 @@ public partial class SummaryPage : ContentPage
 	public SummaryPage(SummaryPageVM vm)
 	{
 		InitializeComponent();
+		vm.PopulateUsersRecord();
 		BindingContext = vm;
 	}
-    
 }

@@ -6,6 +6,7 @@ using Microsoft.Maui.Controls;
 using UIT_CodeGym.database;
 using UIT_CodeGym.Models;
 using UIT_CodeGym.MVVM.ViewModels;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -13,20 +14,24 @@ namespace UIT_CodeGym.ViewModels
     public partial class QuizPageVM : BaseViewModel 
     {
         public ObservableCollection<QuestionModel> OperatorQuestions { get; set; }
-        public ObservableCollection<QuestionModel> PointerQuestions { get; set; }
-        public ObservableCollection<QuestionModel> SwitchQuestions { get; set; }
+      
+
+        [ObservableProperty]
+        string title;
+
+        QuestionsService service = new QuestionsService();
+
         public QuizPageVM()
         {
             OperatorQuestions = new ObservableCollection<QuestionModel>();
-            PointerQuestions = new ObservableCollection<QuestionModel>();
-            SwitchQuestions = new ObservableCollection<QuestionModel>();
-                   }
+           
+            Title = "";
+        }
     
-        QuestionsService service = new QuestionsService();
-        public List<QuestionModel> PopulateOperatorQuestions()
+        public List<QuestionModel> PopulateQuestions()
         {
             List<QuestionModel> questions = new List<QuestionModel>();
-            var documents = service.FetchOperatorsQuestions();
+            var documents = service.FetchQuestions("operators");
             foreach (QuestionModel qs in documents)
             {
                 OperatorQuestions.Add(qs);
@@ -37,23 +42,6 @@ namespace UIT_CodeGym.ViewModels
         }
 
 
-        public void PopulatePointerQuestions()
-        {
-            var documents = service.FetchPointerQuestions();
-            foreach (QuestionModel qs in documents)
-            {
-                OperatorQuestions.Add(qs);
-            }
-        }
-
-        public void PopulateSwitchQuestions()
-        {
-            var documents = service.FetchSwitchQuestions();
-            foreach (QuestionModel qs in documents)
-            {
-                OperatorQuestions.Add(qs);
-            }
-        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -61,35 +49,35 @@ namespace UIT_CodeGym.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        [RelayCommand]
-        public static async void StartForum()
-        {
-            await Shell.Current.GoToAsync("///Forum");
+        //[RelayCommand]
+        //public static async void StartForum()
+        //{
+        //    await Shell.Current.GoToAsync("///Forum");
 
-        }
-        [RelayCommand]
-        public static async void StartTest()
-        {
-            await Shell.Current.GoToAsync("///Test");
+        //}
+        //[RelayCommand]
+        //public static async void StartTest()
+        //{
+        //    await Shell.Current.GoToAsync("///Test");
 
-        }
+        //}
 
-        [RelayCommand]
-        public static async void StartAbout()
-        {
-            await Shell.Current.GoToAsync("///About");
-        }
-        [RelayCommand]
-        public static async void StartMain()
-        {
-            await Shell.Current.GoToAsync("///Main");
-        }
+        //[RelayCommand]
+        //public static async void StartAbout()
+        //{
+        //    await Shell.Current.GoToAsync("///About");
+        //}
+        //[RelayCommand]
+        //public static async void StartMain()
+        //{
+        //    await Shell.Current.GoToAsync("///Main");
+        //}
 
-        [RelayCommand]
-        public static async void StartSummary()
-        {
-            await Shell.Current.GoToAsync("///Summary");
-        }
+        //[RelayCommand]
+        //public static async void StartSummary()
+        //{
+        //    await Shell.Current.GoToAsync("///Summary");
+        //}
 
     }
     

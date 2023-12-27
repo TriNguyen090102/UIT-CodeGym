@@ -12,14 +12,19 @@ public partial class QuizPage : ContentPage
     QuestionsService service = new QuestionsService();
     List<Button> selectedButton = new List<Button>();
     List<Button> correctButton = new List<Button>();
-
+    int correctAnswerCount = 0;
     List<QuestionModel> questions = new List<QuestionModel>();
+    bool isFinished;
+    string title;
 
     public QuizPage(QuizPageVM vm)
     {
         InitializeComponent();
-        questions = vm.PopulateOperatorQuestions();
+        questions = vm.PopulateQuestions();
+        //SummaryBtn.IsEnabled = false;
+        isFinished = false;
         BindingContext = vm;
+        title = vm.Title;
         for (int i = 0; i < 10; i++)
         {
             selectedButton.Add(null);  // Add null as the initial value
@@ -596,20 +601,53 @@ public partial class QuizPage : ContentPage
     }
     void OnFinish(object sender, System.EventArgs e)
     {
+        bool isSelectedAll = true;
         for (int i = 0; i < 10; i++)
         {
-            if (answer[i].ToString() != questions[i].correct_answer)
+            if (selectedButton[i] == null)
             {
-                selectedButton[i].BackgroundColor = Color.FromHex("#F34B4B");
+                isSelectedAll = false;
             }
-            correctButton[i].BackgroundColor = Color.FromHex("#46C579");
         }
-        foreach (View childView in SummaryBtn.Children.Cast<View>())
+        if(isSelectedAll)
         {
-            if (childView is Button button)
-                button.IsEnabled = false;
+            for (int i = 0; i < 10; i++)
+            {
+                if (answer[i].ToString() != questions[i].correct_answer)
+                {
+                    selectedButton[i].BackgroundColor = Color.FromHex("#F34B4B");
+                    
+                }
+                else
+                {
+                    correctAnswerCount++;
+                }
+                correctButton[i].BackgroundColor = Color.FromHex("#46C579");
+
+            }
+
+            isFinished = true;
+        }else
+        {
+            Shell.Current.DisplayAlert("", "Please select all applicable answers for each question before continuing.", "Cancel");
         }
-        SummaryBtn.isEnabled = true;
     }
-    
+    async void StartSummary(object sender, System.EventArgs e)
+    {
+        if(isFinished)
+        {
+            var summaryVM = new SummaryPageVM();
+            summaryVM.CorrectAnswerCount = correctAnswerCount;
+            summaryVM.InCorrectAnswerCount = 10 - correctAnswerCount;
+            summaryVM.Title = title;
+            var summaryPage = new SummaryPage(summaryVM);
+            await Shell.Current.Navigation.PushAsync(summaryPage);
+        }
+        else
+        {
+            await Shell.Current.DisplayAlert("", "Please summit your all answers before continuing.", "Cancel");
+        }
+
+    }
+
 }

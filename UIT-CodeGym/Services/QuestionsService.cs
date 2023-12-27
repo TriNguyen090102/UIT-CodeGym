@@ -53,30 +53,39 @@ namespace UIT_CodeGym.database
             return false;
         }
 
-         public System.Collections.Generic.List<QuestionModel> FetchOperatorsQuestions() 
+         public System.Collections.Generic.List<QuestionModel> FetchQuestions(string title) 
         {
             var operatorsQuestionCollection =  db.GetCollection<QuestionModel>("QuestionDB");
-            var filter =  Builders<QuestionModel>.Filter.Eq("title", "operators"); ;
+            var filter =  Builders<QuestionModel>.Filter.Eq("title", title);
             var documents =  operatorsQuestionCollection.Find(filter).ToList();
 
             return documents;
         }
 
-        public System.Collections.Generic.List<QuestionModel> FetchPointerQuestions()
+        //public System.Collections.Generic.List<QuestionModel> FetchPointerQuestions()
+        //{
+        //    var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
+        //    var filter = Builders<QuestionModel>.Filter.Eq("title", "pointer"); ;
+        //    var documents = operatorsQuestionCollection.Find(filter).ToList();
+
+        //    return documents;
+        //}
+
+        //public System.Collections.Generic.List<QuestionModel> FetchSwitchQuestions()
+        //{
+        //    var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
+        //    var filter = Builders<QuestionModel>.Filter.Eq("title", "switch"); ;
+        //    var documents = operatorsQuestionCollection.Find(filter).ToList();
+
+        //    return documents;
+        //}
+
+
+        public System.Collections.Generic.List<UserRecordModel> FetchUsersRecord(string title)
         {
-            var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
-            var filter = Builders<QuestionModel>.Filter.Eq("title", "pointer"); ;
+            var operatorsQuestionCollection = db.GetCollection<UserRecordModel>("UserRecord");
+            var filter = Builders<UserRecordModel>.Filter.Eq("title", title); ;
             var documents = operatorsQuestionCollection.Find(filter).ToList();
-
-            return documents;
-        }
-
-        public System.Collections.Generic.List<QuestionModel> FetchSwitchQuestions()
-        {
-            var operatorsQuestionCollection = db.GetCollection<QuestionModel>("QuestionDB");
-            var filter = Builders<QuestionModel>.Filter.Eq("title", "switch"); ;
-            var documents = operatorsQuestionCollection.Find(filter).ToList();
-
             return documents;
         }
     }

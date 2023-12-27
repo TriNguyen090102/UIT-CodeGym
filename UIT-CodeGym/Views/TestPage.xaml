@@ -158,6 +158,7 @@
                     <Button
                         Grid.Row="2"
                         Margin="100,30"
+                        Command="{Binding StartQuizCommand}"
                         CornerRadius="15"
                         FontFamily="RalewaySemiBold"
                         HeightRequest="40"
@@ -165,7 +166,6 @@
                         Text="Start"
                         TextColor="White"
                         VerticalOptions="Center"
-                        Command="{Binding StartQuizCommand}"
                         WidthRequest="100">
                         <Button.Background>
                             <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">

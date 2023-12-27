@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIT_CodeGym.MVVM.ViewModels;
+using UIT_CodeGym.MVVM.Views;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -38,7 +39,10 @@ namespace UIT_CodeGym.ViewModels
         [RelayCommand]
         public static async void StartQuiz()
         {
-            await Shell.Current.GoToAsync("///Quiz");
+            var quizViewModel = new QuizPageVM();
+            quizViewModel.Title = "test";
+            var quizPage = new QuizPage(quizViewModel);
+            await Shell.Current.Navigation.PushAsync(quizPage);
         }
 
     }
