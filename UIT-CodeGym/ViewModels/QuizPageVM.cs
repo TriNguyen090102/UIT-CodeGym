@@ -31,7 +31,7 @@ namespace UIT_CodeGym.ViewModels
         public List<QuestionModel> PopulateQuestions()
         {
             List<QuestionModel> questions = new List<QuestionModel>();
-            var documents = service.FetchQuestions("operators");
+            var documents = service.FetchQuestions(Title);
             foreach (QuestionModel qs in documents)
             {
                 OperatorQuestions.Add(qs);
@@ -73,11 +73,11 @@ namespace UIT_CodeGym.ViewModels
         //    await Shell.Current.GoToAsync("///Main");
         //}
 
-        //[RelayCommand]
-        //public static async void StartSummary()
-        //{
-        //    await Shell.Current.GoToAsync("///Summary");
-        //}
+        [RelayCommand]
+        public static async void Exit()
+        {
+            await Shell.Current.Navigation.PopAsync();
+        }
 
     }
     

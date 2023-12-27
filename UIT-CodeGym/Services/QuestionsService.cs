@@ -52,8 +52,44 @@ namespace UIT_CodeGym.database
             
             return false;
         }
+        public async void UpdateUsersRecord(string username, int point)
+        {
+            if(point == 10)
+            {
+                var userRecordCollection = db.GetCollection<UserRecordModel>("UserRecord");
+                var filter = Builders<UserRecordModel>.Filter.Eq("username", username); ;
+                var documents = userRecordCollection.Find(filter).ToList();
+                if (documents.Count > 0)
+                {
+                    var oldValue = documents[0].Score;
+                    var update = Builders<UserRecordModel>.Update.Set("score", oldValue + 1);
+                    await userRecordCollection.UpdateOneAsync(filter, update);
+                }
+                else
+                {
+                    //add a new record
+                    try
+                    {
+                        UserRecordModel newRecord = new()
+                        {
+                            UserName = username,
+                            Score = 1
+                        };
+                        await userRecordCollection.InsertOneAsync(newRecord);
+                       
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                    }
 
-         public System.Collections.Generic.List<QuestionModel> FetchQuestions(string title) 
+                }
+                
+
+            }    
+        }
+
+        public System.Collections.Generic.List<QuestionModel> FetchQuestions(string title) 
         {
             var operatorsQuestionCollection =  db.GetCollection<QuestionModel>("QuestionDB");
             var filter =  Builders<QuestionModel>.Filter.Eq("title", title);

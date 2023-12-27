@@ -45,6 +45,7 @@
                 Grid.Column="1"
                 Margin="0,0,20,0"
                 Background="Transparent"
+                Command="{Binding ExitCommand}"
                 HorizontalOptions="EndAndExpand"
                 Text="Exit">
                 <Button.FontSize>30</Button.FontSize>

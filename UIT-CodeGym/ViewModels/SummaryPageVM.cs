@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using UIT_CodeGym.database;
 using UIT_CodeGym.Models;
 using UIT_CodeGym.MVVM.ViewModels;
+using UIT_CodeGym.MVVM.Views;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -75,6 +76,15 @@ namespace UIT_CodeGym.ViewModels
         public static async void StartQuiz()
         {
             await Shell.Current.GoToAsync("///Quiz");
+        }
+
+        [RelayCommand]
+        public async void PracticeAgain()
+        {
+                var quizViewModel = new QuizPageVM();
+                quizViewModel.Title = Title;
+                var quizPage = new QuizPage(quizViewModel);
+                await Shell.Current.Navigation.PushAsync(quizPage);
         }
 
     }

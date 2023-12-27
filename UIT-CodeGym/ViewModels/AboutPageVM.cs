@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIT_CodeGym.MVVM.ViewModels;
+using UIT_CodeGym.Services;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -29,6 +30,12 @@ namespace UIT_CodeGym.ViewModels
         public static async void StartMain()
         {
             await Shell.Current.GoToAsync("///Main");
+        }
+        [RelayCommand]
+        public static async void LogOut()
+        {
+            await Shell.Current.GoToAsync("///Introduction");
+            AppProperties.UserName = "";
         }
 
     }

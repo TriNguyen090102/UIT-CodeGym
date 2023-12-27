@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UIT_CodeGym.MVVM.ViewModels;
 using UIT_CodeGym.MVVM.Views;
+using UIT_CodeGym.Services;
 
 namespace UIT_CodeGym.ViewModels
 {
@@ -40,9 +41,16 @@ namespace UIT_CodeGym.ViewModels
         public static async void StartQuiz()
         {
             var quizViewModel = new QuizPageVM();
-            quizViewModel.Title = "test";
+            quizViewModel.Title = "operators";
             var quizPage = new QuizPage(quizViewModel);
             await Shell.Current.Navigation.PushAsync(quizPage);
+        }
+
+        [RelayCommand]
+        public static async void LogOut()
+        {
+            await Shell.Current.GoToAsync("///Introduction");
+            AppProperties.UserName = "";
         }
 
     }

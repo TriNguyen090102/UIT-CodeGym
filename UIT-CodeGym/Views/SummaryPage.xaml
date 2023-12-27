@@ -15,8 +15,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
-                <GradientStop Offset="0" Color="#FFFFFF" />
-                <GradientStop Offset="1" Color="#FFFFFF" />
+                <GradientStop Offset="0" Color="#B8C1FF" />
+                <GradientStop Offset="1" Color="#F2CDEF" />
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -40,6 +40,18 @@
             <Button.TextColor>#05299E</Button.TextColor>
             <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
         </Button>
+        <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
+            <Button
+                Margin="0,0,0,0"
+                Background="Transparent"
+                Command="{Binding PracticeAgainCommand}"
+                HorizontalOptions="End"
+                Text="Practice Again">
+                <Button.FontSize>30</Button.FontSize>
+                <Button.TextColor>Black</Button.TextColor>
+                <Button.FontFamily>Raleway</Button.FontFamily>
+            </Button>
+        </HorizontalStackLayout>
 
         <VerticalStackLayout
             Grid.Row="1"
@@ -196,7 +208,7 @@
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="Time"
+                                                Text="ID"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                     </HorizontalStackLayout>

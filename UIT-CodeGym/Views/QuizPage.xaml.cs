@@ -2,6 +2,8 @@
 using UIT_CodeGym.Models;
 using UIT_CodeGym.ViewModels;
 using System.Linq;
+using UIT_CodeGym.Services;
+
 namespace UIT_CodeGym.MVVM.Views;
 
 
@@ -642,12 +644,12 @@ public partial class QuizPage : ContentPage
             summaryVM.Title = title;
             var summaryPage = new SummaryPage(summaryVM);
             await Shell.Current.Navigation.PushAsync(summaryPage);
+            service.UpdateUsersRecord(AppProperties.UserName, correctAnswerCount);
         }
         else
         {
             await Shell.Current.DisplayAlert("", "Please summit your all answers before continuing.", "Cancel");
         }
-
     }
 
 }
