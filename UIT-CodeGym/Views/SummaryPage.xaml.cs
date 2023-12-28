@@ -1,15 +1,18 @@
+using UIT_CodeGym.database;
+using UIT_CodeGym.Models;
 using UIT_CodeGym.ViewModels;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using SkiaSharp.Views;
+
 namespace UIT_CodeGym.MVVM.Views;
 
 public partial class SummaryPage : ContentPage
 {
-	public SummaryPage(SummaryPageVM vm)
+    string title;
+    List<UserRecordModel> record = new List<UserRecordModel>();
+    public SummaryPage(SummaryPageVM vm)
 	{
 		InitializeComponent();
-		vm.PopulateUsersRecord();
-		BindingContext = vm;
+		record = vm.PopulateUsersRecord();
+        title = vm.Title;
+        BindingContext = vm;
 	}
 }

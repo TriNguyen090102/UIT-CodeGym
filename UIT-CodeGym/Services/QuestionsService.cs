@@ -72,7 +72,7 @@ namespace UIT_CodeGym.database
                     {
                         UserRecordModel newRecord = new()
                         {
-                            UserName = username,
+                            userName = username,
                             Score = 1
                         };
                         await userRecordCollection.InsertOneAsync(newRecord);

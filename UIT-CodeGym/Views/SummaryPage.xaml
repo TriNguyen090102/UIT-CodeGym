@@ -158,13 +158,7 @@
                             Margin="-60,0,0,0"/>
                         
                     </HorizontalStackLayout>
-                    <ListView HasUnevenRows="True" SeparatorVisibility="None"
-                              ItemsSource="{Binding UsersRecord}"
-                              
-                              BackgroundColor="Transparent">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
+                    
                                     <HorizontalStackLayout 
                                         HorizontalOptions="CenterAndExpand" Spacing="20">
                                         <Frame
@@ -176,7 +170,7 @@
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="{Binding Title}"
+                                                Text="{Binding UsersRecord[0].Rank}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         <Frame
@@ -188,7 +182,7 @@
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="{ Binding UserName}"
+                                                Text="{Binding UsersRecord[0].userName}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         <Frame
@@ -200,16 +194,13 @@
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="{Binding Score}"
+                                                Text="{Binding UsersRecord[0].Score}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         
                                         
                                     </HorizontalStackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                
                 </VerticalStackLayout>
             </Frame>
 

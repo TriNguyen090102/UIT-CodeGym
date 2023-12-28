@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using UIT_CodeGym.database;
 using UIT_CodeGym.Models;
 using UIT_CodeGym.MVVM.ViewModels;
@@ -10,29 +11,33 @@ namespace UIT_CodeGym.ViewModels
 {
     public partial class SummaryPageVM : BaseViewModel
     {
+        public ObservableCollection<UserRecordModel> UsersRecord { get; set; }
         [ObservableProperty]
         int correctAnswerCount;
         [ObservableProperty]
         int inCorrectAnswerCount;
         [ObservableProperty]
         string title;
-        QuestionsService service = new QuestionsService();
-
-        public ObservableCollection<UserRecordModel> UsersRecord { get; set; }
-
-        public SummaryPageVM() {
+         QuestionsService service = new QuestionsService();
+        public SummaryPageVM()
+        {
             CorrectAnswerCount = 0;
             InCorrectAnswerCount = 0;
             Title = "";
             UsersRecord = new ObservableCollection<UserRecordModel>();
         }
-        public void PopulateUsersRecord()
+        public List<UserRecordModel> PopulateUsersRecord()
+
         {
-            var documents = service.FetchUsersRecord(Title);
+            List<UserRecordModel> record = new List<UserRecordModel>();
+            var documents = service.FetchUsersRecord( Title);
             foreach (UserRecordModel rc in documents)
             {
                 UsersRecord.Add(rc);
+                record.Add(rc);
             }
+
+            return record;
         }
 
         [RelayCommand]
@@ -41,7 +46,7 @@ namespace UIT_CodeGym.ViewModels
             string tmp = "";
             foreach(UserRecordModel rc in UsersRecord)
             {
-                tmp += rc.UserName + rc.Score;
+                tmp += rc.userName + rc.Score;
             }
             Shell.Current.DisplayAlert("", tmp, "ok");
                 
@@ -86,6 +91,5 @@ namespace UIT_CodeGym.ViewModels
                 var quizPage = new QuizPage(quizViewModel);
                 await Shell.Current.Navigation.PushAsync(quizPage);
         }
-
     }
 }

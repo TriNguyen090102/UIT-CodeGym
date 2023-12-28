@@ -14,10 +14,10 @@ namespace UIT_CodeGym.Models
         public string Id { get; set; }
 
         [BsonElement("username")]
-        public string UserName { get; set; }
+        public string userName { get; set; }
         [BsonElement("score")]
         public int Score { get; set; }
         [BsonElement("title")]
-        public string Title { get; set; }
+        public string Rank { get; set; }
     }
 }
