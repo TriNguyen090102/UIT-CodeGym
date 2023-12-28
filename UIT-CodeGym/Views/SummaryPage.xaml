@@ -167,7 +167,7 @@
                             WidthRequest="128">
                             <Label
                                 FontFamily="RalewayBold"
-                                FontSize="64"
+                                FontSize="50"
                                 HorizontalOptions="CenterAndExpand"
                                 Text="1"
                                 TextColor="Black"
@@ -180,7 +180,7 @@
                             WidthRequest="255">
                             <Label
                                 FontFamily="RalewayBold"
-                                FontSize="64"
+                                FontSize="50"
                                 HorizontalOptions="CenterAndExpand"
                                 Text="{Binding UsersRecord[0].userName}"
                                 TextColor="Black"
@@ -193,9 +193,97 @@
                             WidthRequest="128">
                             <Label
                                 FontFamily="RalewayBold"
-                                FontSize="64"
+                                FontSize="50"
                                 HorizontalOptions="CenterAndExpand"
                                 Text="{Binding UsersRecord[0].Score}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="2"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="255">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[1].userName}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[1].Score}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="3"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="255">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[2].userName}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="50"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[2].Score}"
                                 TextColor="Black"
                                 VerticalOptions="CenterAndExpand" />
                         </Frame>

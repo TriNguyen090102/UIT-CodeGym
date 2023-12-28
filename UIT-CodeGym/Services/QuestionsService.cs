@@ -121,7 +121,9 @@ namespace UIT_CodeGym.database
         {
             var userRecordCollection = db.GetCollection<UserRecordModel>("UserRecord");
             var filter = Builders<UserRecordModel>.Filter.Eq("title", title); ;
-            var documents = userRecordCollection.Find(filter).ToList();
+            var sort = Builders<UserRecordModel>.Sort.Descending("score");
+
+            var documents = userRecordCollection.Find(filter).Sort(sort).ToList();
             return documents;
         }
     }
