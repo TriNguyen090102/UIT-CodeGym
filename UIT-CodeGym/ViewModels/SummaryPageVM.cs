@@ -30,7 +30,7 @@ namespace UIT_CodeGym.ViewModels
 
         {
             List<UserRecordModel> record = new List<UserRecordModel>();
-            var documents = service.FetchUsersRecord( Title);
+            var documents = service.FetchUsersRecord(Title);
             foreach (UserRecordModel rc in documents)
             {
                 UsersRecord.Add(rc);

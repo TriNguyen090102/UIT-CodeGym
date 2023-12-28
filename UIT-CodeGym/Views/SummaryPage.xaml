@@ -32,7 +32,7 @@
         <Button
             Margin="0,0,0,0"
             Background="Transparent"
-            Command="{Binding StartMainCommand}"
+            Command="{Binding StartTestCommand}"
             HorizontalOptions="StartAndExpand"
             SemanticProperties.HeadingLevel="Level1"
             Text="UITCodeGym">
@@ -140,67 +140,69 @@
                         HorizontalOptions="CenterAndExpand"
                         Text="RECORD"
                         VerticalOptions="StartAndExpand" />
-                    <HorizontalStackLayout Spacing="140" Margin="0,0,0,20">
+                    <HorizontalStackLayout Margin="0,0,0,20" Spacing="140">
                         <Label
+                            Margin="40,0,0,0"
                             FontFamily="RalewayBold"
                             FontSize="30"
-                            Margin="40,0,0,0"
                             Text="RANK" />
                         <Label
+                            Margin="-50,0,0,0"
                             FontFamily="RalewayBold"
                             FontSize="30"
-                            Text="USERNAME"
-                            Margin="-50,0,0,0"/>
+                            Text="USERNAME" />
                         <Label
+                            Margin="-60,0,0,0"
                             FontFamily="RalewayBold"
                             FontSize="30"
-                            Text="SCORE"
-                            Margin="-60,0,0,0"/>
-                        
+                            Text="SCORE" />
+
                     </HorizontalStackLayout>
-                    
-                                    <HorizontalStackLayout 
-                                        HorizontalOptions="CenterAndExpand" Spacing="20">
-                                        <Frame
-                                            BackgroundColor="White"
-                                            CornerRadius="20"
-                                            HeightRequest="127"
-                                            WidthRequest="128">
-                                            <Label
-                                                FontFamily="RalewayBold"
-                                                FontSize="64"
-                                                HorizontalOptions="CenterAndExpand"
-                                                Text="{Binding UsersRecord[0].Rank}"
-                                                VerticalOptions="CenterAndExpand" />
-                                        </Frame>
-                                        <Frame
-                                            BackgroundColor="White"
-                                            CornerRadius="20"
-                                            HeightRequest="127"
-                                            WidthRequest="255">
-                                            <Label
-                                                FontFamily="RalewayBold"
-                                                FontSize="64"
-                                                HorizontalOptions="CenterAndExpand"
-                                                Text="{Binding UsersRecord[0].userName}"
-                                                VerticalOptions="CenterAndExpand" />
-                                        </Frame>
-                                        <Frame
-                                            BackgroundColor="White"
-                                            CornerRadius="20"
-                                            HeightRequest="127"
-                                            WidthRequest="128">
-                                            <Label
-                                                FontFamily="RalewayBold"
-                                                FontSize="64"
-                                                HorizontalOptions="CenterAndExpand"
-                                                Text="{Binding UsersRecord[0].Score}"
-                                                VerticalOptions="CenterAndExpand" />
-                                        </Frame>
-                                        
-                                        
-                                    </HorizontalStackLayout>
-                                
+
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="64"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="1"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="255">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="64"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[0].userName}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="127"
+                            WidthRequest="128">
+                            <Label
+                                FontFamily="RalewayBold"
+                                FontSize="64"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding UsersRecord[0].Score}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+
+                    </HorizontalStackLayout>
+
                 </VerticalStackLayout>
             </Frame>
 

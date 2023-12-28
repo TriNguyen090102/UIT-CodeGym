@@ -642,6 +642,7 @@ public partial class QuizPage : ContentPage
             summaryVM.CorrectAnswerCount = correctAnswerCount;
             summaryVM.InCorrectAnswerCount = 10 - correctAnswerCount;
             summaryVM.Title = title;
+            summaryVM.PopulateUsersRecord();
             var summaryPage = new SummaryPage(summaryVM);
             await Shell.Current.Navigation.PushAsync(summaryPage);
             service.UpdateUsersRecord(AppProperties.UserName, correctAnswerCount);

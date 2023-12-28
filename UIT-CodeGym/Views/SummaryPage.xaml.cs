@@ -11,8 +11,7 @@ public partial class SummaryPage : ContentPage
     public SummaryPage(SummaryPageVM vm)
 	{
 		InitializeComponent();
-		record = vm.PopulateUsersRecord();
-        title = vm.Title;
+		vm.PopulateUsersRecord();
         BindingContext = vm;
 	}
 }
