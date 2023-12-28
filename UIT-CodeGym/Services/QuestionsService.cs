@@ -119,9 +119,9 @@ namespace UIT_CodeGym.database
 
         public System.Collections.Generic.List<UserRecordModel> FetchUsersRecord(string title)
         {
-            var operatorsQuestionCollection = db.GetCollection<UserRecordModel>("UserRecord");
+            var userRecordCollection = db.GetCollection<UserRecordModel>("UserRecord");
             var filter = Builders<UserRecordModel>.Filter.Eq("title", title); ;
-            var documents = operatorsQuestionCollection.Find(filter).ToList();
+            var documents = userRecordCollection.Find(filter).ToList();
             return documents;
         }
     }

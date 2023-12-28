@@ -15,8 +15,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="0.3,0">
-                <GradientStop Offset="0" Color="#B8C1FF" />
-                <GradientStop Offset="1" Color="#F2CDEF" />
+                <GradientStop Offset="0" Color="#FFFFFF" />
+                <GradientStop Offset="1" Color="#FFFFFF" />
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -40,18 +40,6 @@
             <Button.TextColor>#05299E</Button.TextColor>
             <Button.FontFamily>RalewayExtraBold</Button.FontFamily>
         </Button>
-        <HorizontalStackLayout Grid.Column="1" HorizontalOptions="EndAndExpand">
-            <Button
-                Margin="0,0,0,0"
-                Background="Transparent"
-                Command="{Binding PracticeAgainCommand}"
-                HorizontalOptions="End"
-                Text="Practice Again">
-                <Button.FontSize>30</Button.FontSize>
-                <Button.TextColor>Black</Button.TextColor>
-                <Button.FontFamily>Raleway</Button.FontFamily>
-            </Button>
-        </HorizontalStackLayout>
 
         <VerticalStackLayout
             Grid.Row="1"
@@ -146,35 +134,39 @@
                 </Frame.Background>
                 <VerticalStackLayout>
                     <Label
-                        Margin="0,0,0,10"
+                        Margin="0,0,0,20"
                         FontFamily="RalewayBold"
                         FontSize="48"
                         HorizontalOptions="CenterAndExpand"
                         Text="RECORD"
                         VerticalOptions="StartAndExpand" />
-                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="140">
+                    <HorizontalStackLayout Spacing="140" Margin="0,0,0,20">
                         <Label
                             FontFamily="RalewayBold"
                             FontSize="30"
-                            HorizontalOptions="StartAndExpand"
-                            Text="RANK"
-                            VerticalOptions="StartAndExpand" />
+                            Margin="40,0,0,0"
+                            Text="RANK" />
                         <Label
                             FontFamily="RalewayBold"
                             FontSize="30"
-                            HorizontalOptions="CenterAndExpand"
+                            Text="USERNAME"
+                            Margin="-50,0,0,0"/>
+                        <Label
+                            FontFamily="RalewayBold"
+                            FontSize="30"
                             Text="SCORE"
-                            VerticalOptions="StartAndExpand" />
-                        <Label
-                            FontFamily="RalewayBold"
-                            FontSize="30"
-                            Text="TIME" />
+                            Margin="-60,0,0,0"/>
+                        
                     </HorizontalStackLayout>
-                    <ListView HasUnevenRows="True" SeparatorVisibility="None">
+                    <ListView HasUnevenRows="True" SeparatorVisibility="None"
+                              ItemsSource="{Binding UsersRecord}"
+                              
+                              BackgroundColor="Transparent">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                                    <HorizontalStackLayout 
+                                        HorizontalOptions="CenterAndExpand" Spacing="20">
                                         <Frame
                                             BackgroundColor="White"
                                             CornerRadius="20"
@@ -184,33 +176,35 @@
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="Rank"
+                                                Text="{Binding Title}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         <Frame
                                             BackgroundColor="White"
                                             CornerRadius="20"
                                             HeightRequest="127"
-                                            WidthRequest="224">
+                                            WidthRequest="255">
                                             <Label
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="Score"
+                                                Text="{ Binding UserName}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
                                         <Frame
                                             BackgroundColor="White"
                                             CornerRadius="20"
                                             HeightRequest="127"
-                                            WidthRequest="179">
+                                            WidthRequest="128">
                                             <Label
                                                 FontFamily="RalewayBold"
                                                 FontSize="64"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Text="ID"
+                                                Text="{Binding Score}"
                                                 VerticalOptions="CenterAndExpand" />
                                         </Frame>
+                                        
+                                        
                                     </HorizontalStackLayout>
                                 </ViewCell>
                             </DataTemplate>
